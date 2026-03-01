@@ -121,7 +121,7 @@ Material:
     - _Edge_Sharpness: 50
     - _Emission: 0
     - _Emission_Map_Multiplier: 1
-    - _Emission_Tiling: 1
+    - _Emission_Tiling: 9.21
     - _Metallic: 0.5
     - _Metallic_Map_Multiplier: 1
     - _Metallic_Tiling: 1
