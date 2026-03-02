@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &333296601395876904
+--- !u!1 &4450942670298894284
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,68 +8,60 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7534690471162848805}
-  - component: {fileID: 2761044075537631363}
-  - component: {fileID: -299806128855994480}
+  - component: {fileID: 6564555324968587576}
+  - component: {fileID: 549083488695563926}
+  - component: {fileID: 1843173446278815561}
   m_Layer: 0
-  m_Name: "\u5C0F\u53E3\u5F84"
+  m_Name: "\u9E70\u773C\u63E1\u628A"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7534690471162848805
+--- !u!4 &6564555324968587576
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333296601395876904}
+  m_GameObject: {fileID: 4450942670298894284}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2159224, y: -2.0290687, z: -21.165743}
+  m_LocalPosition: {x: 1.9748039, y: -2.01027, z: 0.9646759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2761044075537631363
+--- !u!114 &549083488695563926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333296601395876904}
+  m_GameObject: {fileID: 4450942670298894284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a6f009374c0ffd4b9274db5aee64906, type: 3}
+  m_Script: {fileID: 11500000, guid: 55505d9d48e704346bbb91ab892efe9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setDamage: 1
-  damage: 10
-  setMaxRange: 1
-  maxRange: 200
-  setFireRate: 1
-  fireRate: 10
-  setSemiFireCooldown: 1
-  semiFireCooldown: 0.15
-  setBulletSpeed: 1
-  bulletSpeed: 80
-  setRecoil: 0
-  kickPitchPerShot: 1.2
-  kickYawRandom: 0.6
---- !u!114 &-299806128855994480
+  disableIfPrereqMissing: 1
+  searchInChildren: 1
+--- !u!114 &1843173446278815561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333296601395876904}
+  m_GameObject: {fileID: 4450942670298894284}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkId: 15
+  perkId: 108
   perkTier: 1
   requiredPerkIds: []
+  mutuallyExclusivePerkIds: []
+  flavorText: 
+  description: "\u5B50\u5F39\u81EA\u52A8\u8DDF\u8E2A\u654C\u65B9\u5355\u4F4D"

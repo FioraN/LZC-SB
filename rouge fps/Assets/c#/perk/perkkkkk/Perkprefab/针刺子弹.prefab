@@ -76,6 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkId: 47
+  perkId: 201
   perkTier: 1
   requiredPerkIds: []
+  mutuallyExclusivePerkIds: []
+  flavorText: 
+  description: "\u5B50\u5F39\u4F24\u5BB3\u589E\u52A0\uFF0C\u4F46\u547D\u4E2D\u76EE\u6807\u540E\u4F1A\u5EF6\u8FDF\u9020\u6210\u4F24\u5BB3"

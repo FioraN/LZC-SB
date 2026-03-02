@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3872524971766042548
+--- !u!1 &8647037713882437576
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,60 +8,62 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7850988148663631209}
-  - component: {fileID: 2505594536067751799}
-  - component: {fileID: 3395740656759938697}
+  - component: {fileID: 4455963092999402192}
+  - component: {fileID: 8185000888211541788}
+  - component: {fileID: -1120498644300940196}
   m_Layer: 0
-  m_Name: "\u9042\u53D1\u67AA"
+  m_Name: "\u9730\u5F39\u67AA\u7BA1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7850988148663631209
+--- !u!4 &4455963092999402192
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3872524971766042548}
+  m_GameObject: {fileID: 8647037713882437576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.2159224, y: -2.0290687, z: -21.165743}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2505594536067751799
+--- !u!114 &8185000888211541788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3872524971766042548}
+  m_GameObject: {fileID: 8647037713882437576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d4d669fa7b1ad418336549a817e8a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 94e456a975dd71f46bd1c3e3f4fafb69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableIfPrereqMissing: 1
-  overrideFireMode: 1
-  fireMode: 0
-  overrideReloadType: 1
-  reloadType: 1
---- !u!114 &3395740656759938697
+  pelletsPerShot: 6
+  keepTotalDamageConstant: 1
+  totalDamageMultiplier: 1
+  priority: 0
+--- !u!114 &-1120498644300940196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3872524971766042548}
+  m_GameObject: {fileID: 8647037713882437576}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkId: 45
+  perkId: 4
   perkTier: 1
   requiredPerkIds: []
+  mutuallyExclusivePerkIds: []
+  flavorText: 
+  description: "\u6B66\u5668\u53D8\u4E3A\u9730\u5F39\u67AA\uFF0C\u89E3\u9501\u90E8\u5206\u9730\u5F39\u67AA\u914D\u4EF6"

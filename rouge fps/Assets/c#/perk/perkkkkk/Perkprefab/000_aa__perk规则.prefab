@@ -49,4 +49,4 @@ MonoBehaviour:
   requiredPerkIds: []
   mutuallyExclusivePerkIds: []
   flavorText: 
-  description: 
+  description: "\u4E09\u4F4Did\u4E3A\u673A\u5236perk \u4E2A\u4F4D\u6570id\u4E3A\u5B9A\u8C03\u57FA\u7840perk\n1\u5F00\u5934\u4E3A\u7A81\u51FB\u6B65\u67AA\n2\u5F00\u5934\u4E3A\u51B2\u950B\u67AA\n3\u5F00\u5934\u4E3A\u9730\u5F39\u67AA\n4\u5F00\u5934\u4E3A\u901A\u7528"

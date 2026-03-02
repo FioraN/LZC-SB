@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1716026752021946182
+--- !u!1 &7378469427116028739
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,65 +8,71 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2564974424833945033}
-  - component: {fileID: 6420647453471073117}
-  - component: {fileID: -3597105235552139815}
+  - component: {fileID: 6269683108213023166}
+  - component: {fileID: 6725139575890120850}
+  - component: {fileID: -3993473846896322728}
   m_Layer: 0
-  m_Name: "\u5370\u8BB0\u5B50\u5F39"
+  m_Name: "\u5927\u53E3\u5F84\u67AA\u7BA1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2564974424833945033
+--- !u!4 &6269683108213023166
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716026752021946182}
+  m_GameObject: {fileID: 7378469427116028739}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.2159224, y: -2.0290687, z: -21.165743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6420647453471073117
+--- !u!114 &6725139575890120850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716026752021946182}
+  m_GameObject: {fileID: 7378469427116028739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ddd489f79979f4c80e842f6b921818, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a6f009374c0ffd4b9274db5aee64906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 6
-  addCountOnApplyHit: 1
-  detonateBaseDamage: 10
-  detonateDamagePerApplyHit: 5
-  detonateSkipHitEvent: 1
-  consumeOnDetonate: 1
-  shareStatusesOnDetonateHit: 0
-  jumpMarkOnKill: 0
-  jumpSearchLimit: 64
-  targetGunIndex: -1
---- !u!114 &-3597105235552139815
+  setDamage: 1
+  damage: 20
+  setMaxRange: 1
+  maxRange: 200
+  setFireRate: 1
+  fireRate: 3
+  setSemiFireCooldown: 1
+  semiFireCooldown: 0.15
+  setBulletSpeed: 1
+  bulletSpeed: 80
+  setRecoil: 0
+  kickPitchPerShot: 1.2
+  kickYawRandom: 0.6
+--- !u!114 &-3993473846896322728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716026752021946182}
+  m_GameObject: {fileID: 7378469427116028739}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkId: 8
+  perkId: 3
   perkTier: 1
   requiredPerkIds: []
+  mutuallyExclusivePerkIds: []
+  flavorText: 
+  description: "\u67AA\u68B0\u5C04\u7A0B\u589E\u52A0\uFF0C\u5C04\u901F\u51CF\u5C11\uFF0C\u4F24\u5BB3\u589E\u5927\uFF0C\u89E3\u9501\u90E8\u5206\u5927\u53E3\u5F84\u914D\u4EF6"
