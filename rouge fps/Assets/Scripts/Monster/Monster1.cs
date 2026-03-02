@@ -6,9 +6,6 @@ using UnityEngine.AI;
 public class Monster1 : MonsterBase
 {
     private Animator ani;
-    public float speed = 3;
-    public float attack = 10;// 近战攻击力
-
     private List<Transform> patrolPoints;
 
     // 我们需要引用这个Task，以便在脱战时重置它的状态或目标
@@ -51,6 +48,7 @@ public class Monster1 : MonsterBase
         }
     }
 
+    //获取临近巡逻点
     private Transform GetNearestPatrolPoint()
     {
         Transform nearest = null;
@@ -68,6 +66,8 @@ public class Monster1 : MonsterBase
         return nearest;
     }
 
+
+    //设置行为树
     protected override void SetupBehaviorTree()
     {
         // 1. 受伤
@@ -75,9 +75,11 @@ public class Monster1 : MonsterBase
 
         // 2. 战斗检测 (被激怒 OR 看见人)
         Node checkAggro = new CheckAggro(this);
-        // 如果距离 <= viewRange，视为发现敌人
-        Node checkViewRange = new CheckTargetRange(transform, playerTransform, viewRange);
-        Node detectionCheck = new Selector(new List<Node> { checkAggro, checkViewRange });
+        // 如果距离 <= viewRange，而且在角度范围内 视为发现敌人
+        Node checkViewSector = new CheckTargetSector(transform, playerTransform, viewRange, viewAngle);
+
+        Node detectionCheck = new Selector(new List<Node> { checkAggro, checkViewSector });
+
 
         // 战斗行为
         Node checkAttackRange = new CheckTargetRange(transform, playerTransform, attackRange);
@@ -112,7 +114,7 @@ public class Monster1 : MonsterBase
     }
 
 
-
+    //可以攻击
     protected override void PerformAttack()
     {
         // 1. 检查玩家是否存在且存活
@@ -121,6 +123,8 @@ public class Monster1 : MonsterBase
 
         if (ani != null) ani.SetTrigger("Attack");
 
+
+        //添加对玩家的伤害逻辑
        
 
 
@@ -128,5 +132,5 @@ public class Monster1 : MonsterBase
 
 
 
-    
+
 }

@@ -25,6 +25,47 @@ public class CheckTargetRange : Node
     }
 }
 
+
+// 条件节点：检测目标是否在扇形范围内（视野检测）
+public class CheckTargetSector : Node
+{
+    private readonly Transform _transform;
+    private readonly Transform _target;
+    private readonly float _sqrRange; // 距离平方
+    private readonly float _halfAngle; // 半角（比如视野90度，这里存45度）
+
+    public CheckTargetSector(Transform transform, Transform target, float viewRange, float viewAngle)
+    {
+        _transform = transform;
+        _target = target;
+        _sqrRange = viewRange * viewRange;
+        _halfAngle = viewAngle * 0.5f;
+    }
+
+    public override NodeState Evaluate()
+    {
+        if (_target == null) return NodeState.Failure;
+
+        Vector3 dirToTarget = _target.position - _transform.position;
+
+        // 1. 先检查距离 (SqrMagnitude 比 Distance 快)
+        if (dirToTarget.sqrMagnitude > _sqrRange)
+            return NodeState.Failure;
+
+        // 2. 再检查角度
+        // Vector3.Angle 返回两个向量的夹角(0~180)
+        float angle = Vector3.Angle(_transform.forward, dirToTarget);
+
+        if (angle <= _halfAngle)
+        {
+            return NodeState.Success;
+        }
+
+        return NodeState.Failure;
+    }
+}
+
+
 // 动作节点：使用 NavMesh 移动
 public class TaskNavMove : Node
 {
@@ -123,7 +164,8 @@ public class TaskAttackWithMove : Node
             // 这里可以加一个朝向修正，确保攻击时正对目标
             _monster.transform.LookAt(new Vector3(_target.position.x, _monster.transform.position.y, _target.position.z));
 
-            
+          
+
 
         }
         else
