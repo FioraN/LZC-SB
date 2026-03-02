@@ -67,7 +67,6 @@ MonoBehaviour:
   perkId: 309
   perkTier: 1
   requiredPerkIds: []
-  mutuallyExclusivePerkIds:
-  - 310
+  mutuallyExclusivePerkIds: []
   flavorText: 
   description: "\u5355\u6B21\u5C04\u51FB\u5F39\u4E38\u6570\u91CF\u7FFB\u500D\uFF0C\u5C04\u51FB\u964D\u4F4E\u79FB\u52A8\u901F\u5EA6"
