@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8525381541361844206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7106164111693074813}
+  - component: {fileID: 9103304869134011303}
+  - component: {fileID: -622123299565771552}
+  m_Layer: 0
+  m_Name: "208 \u771F\u94F6\u5F39"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7106164111693074813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525381541361844206}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9103304869134011303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525381541361844206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99cca7cf7989e748bd57a807b1762f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentOfCurrentHP: 0.05
+  maxExtraDamage: 100
+  minExtraDamage: 0
+  ignoreSkipHitEventHits: 1
+  doNotReapplyStatuses: 1
+  hideExtraHitUI: 1
+  targetGunIndex: -1
+--- !u!114 &-622123299565771552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525381541361844206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perkId: 208
+  perkTier: 2
+  requiredPerkGroups:
+  - anyOfPerkIds:
+    - 1
+  mutuallyExclusivePerkGroups:
+  - anyOfPerkIds:
+    - 207
+  flavorText: 
+  description: "\u7206\u5934\u9020\u6210\u76EE\u6807\u5F53\u524D\u751F\u547D\u503CN%\u7684\u989D\u5916\u4F24\u5BB3"

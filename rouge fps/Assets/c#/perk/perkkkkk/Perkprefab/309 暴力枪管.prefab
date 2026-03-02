@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2207611457834584638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8302707628953697314}
+  - component: {fileID: 6271016854033846718}
+  - component: {fileID: -9175582375461455140}
+  m_Layer: 0
+  m_Name: "309 \u66B4\u529B\u67AA\u7BA1"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8302707628953697314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207611457834584638}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6271016854033846718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207611457834584638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79889af2987e64f409c036c18d0d89e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableComponentIfNotShotgun: 1
+  pelletsPostMul: 2
+  slowDuration: 0.6
+  slowPercent: 0.1
+  playerMovement: {fileID: 0}
+  targetGunIndex: -1
+  statPriority: -20000
+--- !u!114 &-9175582375461455140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207611457834584638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perkId: 309
+  perkTier: 2
+  requiredPerkGroups:
+  - anyOfPerkIds:
+    - 4
+  mutuallyExclusivePerkGroups:
+  - anyOfPerkIds:
+    - 310
+  flavorText: 
+  description: "\u5355\u6B21\u5C04\u51FB\u5F39\u4E38\u6570\u91CF\u7FFB\u500D\uFF0C\u5C04\u51FB\u964D\u4F4E\u79FB\u52A8\u901F\u5EA6"
