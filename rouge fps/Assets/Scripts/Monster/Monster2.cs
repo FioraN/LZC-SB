@@ -9,8 +9,7 @@ using UnityEngine.AI;
 public class Monster2 : MonsterBase
 {
     private Animator ani;
-    public float speed = 5;// 移动速度
-    public float attack = 15;// 远程攻击力
+
     // 投射物预制体 (必须在 Inspector 赋值)
     [Header("Ranged Settings")]
     public GameObject projectilePrefab;
@@ -78,11 +77,14 @@ public class Monster2 : MonsterBase
 
         // 2. 战斗检测
         Node checkAggro = new CheckAggro(this);
-        Node checkViewRange = new CheckTargetRange(transform, playerTransform, viewRange);
-        Node detectionCheck = new Selector(new List<Node> { checkAggro, checkViewRange });
+
+        // 如果距离 <= viewRange，而且在角度范围内 视为发现敌人
+        Node checkViewSector = new CheckTargetSector(transform, playerTransform, viewRange, viewAngle);
+
+        Node detectionCheck = new Selector(new List<Node> { checkAggro, checkViewSector });
 
         // 3. 战斗行为
-      
+
         Node checkAttackRange = new CheckTargetRange(transform, playerTransform, attackRange);
 
         // TaskAttackWithMove 负责：停止 -> 转身 -> 前摇 -> 攻击(此时调用PerformAttack) -> 后摇

@@ -5,16 +5,25 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+
+
 public class MonsterBase : MonoBehaviour
 {
     [Header("Base Stats")]
     public MonsterType type;
     public float hp = 100f;
-    
+    [Header("移动速度")]
+    public float speed = 5;// 移动速度
+    [Header("攻击力")]
+    public float attack = 15;// 远程攻击力
 
     [Header("感知设置")]
     [Tooltip("索敌范围：怪物未发现玩家时，能看到玩家的距离")]
     public float viewRange = 8f;
+
+    [Header("感知角度")]
+    [Range(0, 360)]
+    public float viewAngle = 120f;
 
     [Tooltip("追击范围：怪物发现玩家后，能持续追踪的最大距离")]
     public float chaseRange = 15f;
@@ -23,6 +32,8 @@ public class MonsterBase : MonoBehaviour
     public float attackRange = 2f;
     [Header("攻击冷却时间")]
     public float attackCooldown = 1.5f;
+
+
 
     [HideInInspector] public bool isHurt = false;
     [HideInInspector] public bool hasAggro = false; // 是否已发现敌人
@@ -104,10 +115,18 @@ public class MonsterBase : MonoBehaviour
             // 之前的 Detection Check 节点也会做这个检查，这里是双重保险
             if (distanceToPlayer <= viewRange)
             {
-                if (!hasAggro)
+
+                Vector3 dirToPlayer = (playerTransform.position - transform.position).normalized;
+                // 计算前方与玩家方向的夹角
+                float angle = Vector3.Angle(transform.forward, dirToPlayer);
+
+                // 如果在扇形范围内（角度的一半，因为 Angle 返回的是两者夹角）
+                if (angle <= viewAngle * 0.5f)
                 {
-                    hasAggro = true;
-                    Debug.Log($"{name} spotted player! Engaging.");
+                    if (!hasAggro)
+                    {
+                        hasAggro = true;
+                    }
                 }
             }
         }
@@ -175,7 +194,7 @@ public class MonsterBase : MonoBehaviour
         if (agent != null)
         {
             agent.isStopped = true;
-            agent.enabled = false; 
+            agent.enabled = false;
         }
 
         // 2. 禁用碰撞体（可选，防止玩家被尸体挡住路）
@@ -206,8 +225,19 @@ public class MonsterBase : MonoBehaviour
 
     protected virtual void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.yellow;
+        // 1. 画距离圆
+        Gizmos.color = new Color(1, 1, 0, 0.2f); // 黄色半透明
         Gizmos.DrawWireSphere(transform.position, viewRange);
+
+        // 2. 画扇形角度 (左右两条线)
+        Vector3 leftDir = Quaternion.Euler(0, -viewAngle * 0.5f, 0) * transform.forward;
+        Vector3 rightDir = Quaternion.Euler(0, viewAngle * 0.5f, 0) * transform.forward;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, transform.position + leftDir * viewRange);
+        Gizmos.DrawLine(transform.position, transform.position + rightDir * viewRange);
+
+        // 3. 追击和攻击范围
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.red;
