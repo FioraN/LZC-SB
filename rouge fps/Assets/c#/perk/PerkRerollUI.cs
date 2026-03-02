@@ -228,17 +228,7 @@ public sealed class PerkRerollUI : MonoBehaviour
 
         if (perkManager.HasPerk(id, gunIndex)) return false;
         if (!perkManager.PrerequisitesMet(perkPrefab, gunIndex)) return false;
-
-        var meta = perkPrefab.GetComponent<PerkMeta>();
-        if (meta != null && meta.mutuallyExclusivePerkIds != null)
-        {
-            for (int i = 0; i < meta.mutuallyExclusivePerkIds.Count; i++)
-            {
-                string exclusiveId = meta.mutuallyExclusivePerkIds[i];
-                if (string.IsNullOrWhiteSpace(exclusiveId)) continue;
-                if (perkManager.HasPerk(exclusiveId, gunIndex)) return false;
-            }
-        }
+        if (perkManager.HasMutualExclusionConflict(perkPrefab, gunIndex)) return false;
 
         return true;
     }
@@ -437,3 +427,8 @@ public sealed class PerkRerollUI : MonoBehaviour
         }
     }
 }
+
+
+
+
+

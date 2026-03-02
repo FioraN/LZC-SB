@@ -1,11 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
 /// Displays player HP and Armor on the HUD.
 ///
-/// HP:    filled Image (fillAmount = hp/maxHp)  +  TMP text "hp/maxHp"
+/// HP:    filled Image (fillAmount = hp/maxHp)  +  TMP text
 /// Armor: filled Image (fillAmount = armor/100, capped at 1)  +  TMP text showing armor value
 ///        + icon that hides when armor == 0
 /// </summary>
@@ -19,8 +19,15 @@ public class PlayerVitalsUI : MonoBehaviour
     [Tooltip("Filled Image for HP bar. fillAmount = hp / maxHp.")]
     public Image hpFill;
 
-    [Tooltip("TMP text showing 'hp / maxHp' (e.g. 100/100).")]
+    [Tooltip("TMP text showing HP. Supports rich text styling for max HP.")]
     public TMP_Text hpText;
+
+    [Header("HP Text Style (Max HP)")]
+    [Tooltip("max HP 显示字号（例如：18）。")]
+    [Min(1)] public int maxHpFontSize = 18;
+
+    [Tooltip("max HP 文本透明度（0~1，值越小越透明）。")]
+    [Range(0f, 1f)] public float maxHpAlpha = 0.6f;
 
     [Header("Armor UI")]
     [Tooltip("Filled Image for Armor bar. fillAmount = armor / 100, capped at 1.")]
@@ -32,15 +39,17 @@ public class PlayerVitalsUI : MonoBehaviour
     [Tooltip("Icon shown when armor > 0, hidden when armor == 0.")]
     public GameObject armorIcon;
 
-    // ─────────────────────────────────────────────────────────────────────
-
     private void OnEnable()
     {
         if (vitals == null) return;
-        vitals.OnHpChanged    += RefreshHp;
+
+        if (hpText != null)
+            hpText.richText = true;
+
+        vitals.OnHpChanged += RefreshHp;
         vitals.OnArmorChanged += RefreshArmor;
 
-        // Sync immediately
+        // 立即同步一次 UI
         RefreshHp(vitals.hp, vitals.maxHp);
         RefreshArmor(vitals.armor, vitals.maxArmor);
     }
@@ -48,11 +57,9 @@ public class PlayerVitalsUI : MonoBehaviour
     private void OnDisable()
     {
         if (vitals == null) return;
-        vitals.OnHpChanged    -= RefreshHp;
+        vitals.OnHpChanged -= RefreshHp;
         vitals.OnArmorChanged -= RefreshArmor;
     }
-
-    // ─────────────────────────────────────────────────────────────────────
 
     private void RefreshHp(int current, int max)
     {
@@ -60,7 +67,13 @@ public class PlayerVitalsUI : MonoBehaviour
             hpFill.fillAmount = (max > 0) ? (float)current / max : 0f;
 
         if (hpText != null)
-            hpText.text = $"{current}/{max}";
+        {
+            // 使用 color 标签而不是 alpha 标签，避免个别版本下 alpha 标签被当普通文本显示
+            Color c = hpText.color;
+            c.a = Mathf.Clamp01(maxHpAlpha);
+            string colorHex = ColorUtility.ToHtmlStringRGBA(c);
+            hpText.text = $"{current}<size={maxHpFontSize}><color=#{colorHex}>/{max}</color></size>";
+        }
     }
 
     private void RefreshArmor(int current, int max)
