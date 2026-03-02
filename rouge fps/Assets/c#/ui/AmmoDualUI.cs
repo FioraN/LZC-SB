@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -18,14 +18,17 @@ public class AmmoDualUI : MonoBehaviour
     public Text secondaryText;
 
     [Header("Format")]
-    [Tooltip("How many digits to display (e.g. 3 → 020 / 100).")]
+    [Tooltip("How many digits to display (e.g. 3 -> 020 / 100).")]
     public int digitCount = 3;
 
-    [Tooltip("Color applied to leading zeros — adjust the alpha to control transparency.")]
+    [Tooltip("Color applied to leading zeros - adjust the alpha to control transparency.")]
     public Color leadingZeroColor = new Color(1f, 1f, 1f, 0.25f);
 
     [Tooltip("Fixed character width in em for TMP (0 = disabled). Prevents text jittering when digits change.")]
     public float monoSpaceEm = 0.6f;
+
+    [Tooltip("斜杠两侧的空格数量（0 表示紧贴斜杠）。")]
+    [Min(0)] public int slashPaddingSpaces = 1;
 
     [Header("Update")]
     public bool updateEveryFrame = true;
@@ -33,7 +36,7 @@ public class AmmoDualUI : MonoBehaviour
     private GunAmmo _pAmmo;
     private GunAmmo _sAmmo;
 
-    // Cached hex string; rebuilt whenever the colour changes in the Inspector.
+    // 缓存颜色对应的十六进制字符串，避免每帧重复转换
     private Color _prevLeadingColor;
     private string _leadingHex;
 
@@ -60,17 +63,13 @@ public class AmmoDualUI : MonoBehaviour
 
     private void Update()
     {
-        // Rebuild hex cache if colour was tweaked at runtime.
+        // 运行时改了颜色时，刷新缓存
         if (leadingZeroColor != _prevLeadingColor)
             CacheLeadingHex();
 
         if (!updateEveryFrame) return;
         RefreshAll();
     }
-
-    // ─────────────────────────────────────────────────────────────────────
-    // Auto-wiring & event hooks (unchanged)
-    // ─────────────────────────────────────────────────────────────────────
 
     private void TryAutoWire()
     {
@@ -126,10 +125,6 @@ public class AmmoDualUI : MonoBehaviour
         else SetSecondaryText(-1, -1);
     }
 
-    // ─────────────────────────────────────────────────────────────────────
-    // Formatting
-    // ─────────────────────────────────────────────────────────────────────
-
     private void CacheLeadingHex()
     {
         _prevLeadingColor = leadingZeroColor;
@@ -137,12 +132,7 @@ public class AmmoDualUI : MonoBehaviour
     }
 
     /// <summary>
-    /// Formats an integer to a fixed number of digits.
-    /// Leading zeros are wrapped in a rich-text colour tag so they appear semi-transparent.
-    /// Examples (digitCount = 3):
-    ///   5   → "<color=#…>00</color>5"
-    ///   20  → "<color=#…>0</color>20"
-    ///   100 → "100"
+    /// 按固定位数格式化数字，并将前导 0 着色。
     /// </summary>
     private string FormatNumber(int value)
     {
@@ -151,18 +141,18 @@ public class AmmoDualUI : MonoBehaviour
         int digits = Mathf.Max(digitCount, 1);
         string padded = value.ToString("D" + digits);
 
-        // How many digits does the raw number actually need?
         string raw = value.ToString();
         int leadingCount = padded.Length - raw.Length;
 
         if (leadingCount <= 0)
             return padded;
 
-        // Wrap leading zeros in <color> tag
         return $"<color=#{_leadingHex}>{padded.Substring(0, leadingCount)}</color>{padded.Substring(leadingCount)}";
     }
 
-    /// <summary>Wraps the final display string in mspace tags for TMP so every character occupies equal width.</summary>
+    /// <summary>
+    /// TMP 等宽包裹，避免数字跳动。
+    /// </summary>
     private string WrapMono(string inner)
     {
         if (monoSpaceEm > 0f)
@@ -170,23 +160,32 @@ public class AmmoDualUI : MonoBehaviour
         return inner;
     }
 
+    private string GetSlashSeparator()
+    {
+        int pad = Mathf.Max(0, slashPaddingSpaces);
+        string spaces = new string(' ', pad);
+        return $"{spaces}/{spaces}";
+    }
+
     private void SetPrimaryText(int mag, int reserve)
     {
+        string sep = GetSlashSeparator();
         string s = (mag < 0)
-            ? "-- / --"
-            : $"{FormatNumber(mag)} / {FormatNumber(reserve)}";
+            ? $"--{sep}--"
+            : $"{FormatNumber(mag)}{sep}{FormatNumber(reserve)}";
 
-        if (primaryTMP  != null) primaryTMP.text  = WrapMono(s);
-        if (primaryText != null) primaryText.text = s;   // legacy Text 不支持 mspace
+        if (primaryTMP != null) primaryTMP.text = WrapMono(s);
+        if (primaryText != null) primaryText.text = s;
     }
 
     private void SetSecondaryText(int mag, int reserve)
     {
+        string sep = GetSlashSeparator();
         string s = (mag < 0)
-            ? "-- / --"
-            : $"{FormatNumber(mag)} / {FormatNumber(reserve)}";
+            ? $"--{sep}--"
+            : $"{FormatNumber(mag)}{sep}{FormatNumber(reserve)}";
 
-        if (secondaryTMP  != null) secondaryTMP.text  = WrapMono(s);
+        if (secondaryTMP != null) secondaryTMP.text = WrapMono(s);
         if (secondaryText != null) secondaryText.text = s;
     }
 }

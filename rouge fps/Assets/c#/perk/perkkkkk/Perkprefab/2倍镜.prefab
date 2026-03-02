@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perkId: 414
   perkTier: 1
-  requiredPerkIds: []
-  mutuallyExclusivePerkIds: []
+  requiredPerkGroups: []
+  mutuallyExclusivePerkGroups: []
   flavorText: 
   description: "2\u500D\u7784\u51C6\u955C\u914D\u4EF6"

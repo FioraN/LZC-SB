@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -337,6 +337,55 @@ public sealed class PerkManager : MonoBehaviour
         return false;
     }
 
+    private bool IsAnyOwnedInList(List<string> ids, int gunIndex)
+    {
+        if (ids == null || ids.Count == 0) return false;
+
+        for (int i = 0; i < ids.Count; i++)
+        {
+            var id = ids[i];
+            if (string.IsNullOrWhiteSpace(id)) continue;
+            if (HasPerk(id, gunIndex)) return true;
+        }
+
+        return false;
+    }
+
+    // 组间 AND，组内 OR：每一组只要命中任意一个 ID 即算该组满足。
+    private bool AreAllGroupsSatisfied(List<PerkConditionGroup> groups, int gunIndex, bool emptyResult)
+    {
+        if (groups == null || groups.Count == 0) return emptyResult;
+
+        bool hasEffectiveGroup = false;
+
+        for (int i = 0; i < groups.Count; i++)
+        {
+            var g = groups[i];
+            if (g == null || g.anyOfPerkIds == null || g.anyOfPerkIds.Count == 0) continue;
+
+            hasEffectiveGroup = true;
+            if (!IsAnyOwnedInList(g.anyOfPerkIds, gunIndex))
+                return false;
+        }
+
+        return hasEffectiveGroup ? true : emptyResult;
+    }
+
+    /// <summary>
+    /// 是否命中互斥条件（仅新写法）：
+    /// mutuallyExclusivePerkGroups 采用组间 AND、组内 OR。
+    /// </summary>
+    public bool HasMutualExclusionConflict(GameObject perkObject, int gunIndex)
+    {
+        if (perkObject == null) return false;
+
+        var meta = perkObject.GetComponent<PerkMeta>();
+        if (meta == null) return false;
+
+        // 对于互斥：没有互斥组时，结果应为 false（不冲突）
+        return AreAllGroupsSatisfied(meta.mutuallyExclusivePerkGroups, gunIndex, emptyResult: false);
+    }
+
     public bool PrerequisitesMet(GameObject perkObject, int gunIndex)
     {
         if (perkObject == null) return false;
@@ -344,18 +393,8 @@ public sealed class PerkManager : MonoBehaviour
         var meta = perkObject.GetComponent<PerkMeta>();
         if (meta == null) return true;
 
-        var req = meta.requiredPerkIds;
-        if (req == null || req.Count == 0) return true;
-
-        for (int i = 0; i < req.Count; i++)
-        {
-            var id = req[i];
-            if (string.IsNullOrWhiteSpace(id)) continue;
-
-            if (!HasPerk(id, gunIndex)) return false;
-        }
-
-        return true;
+        // 对于前置：没有前置组时，结果应为 true（默认可用）
+        return AreAllGroupsSatisfied(meta.requiredPerkGroups, gunIndex, emptyResult: true);
     }
 
     public bool TryAddPerkInstanceToGun(MonoBehaviour perkInstance, int gunIndex)
@@ -371,6 +410,7 @@ public sealed class PerkManager : MonoBehaviour
 
         if (HasPerk(id, gunIndex)) return false;
         if (!PrerequisitesMet(perkInstance.gameObject, gunIndex)) return false;
+        if (HasMutualExclusionConflict(perkInstance.gameObject, gunIndex)) return false;
 
         list.Add(perkInstance);
 
@@ -483,3 +523,6 @@ public sealed class PerkManager : MonoBehaviour
         return true;
     }
 }
+
+
+
