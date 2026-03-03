@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4737182033082160241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2465364803981271464}
+  - component: {fileID: 599232519033348522}
+  - component: {fileID: 1098378492194941500}
+  m_Layer: 0
+  m_Name: "206 \u70D9\u5370\u67AA\u53E3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2465364803981271464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737182033082160241}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599232519033348522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737182033082160241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d26769e9b258b44a9107a4ae4dd190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markDuration: 6
+  addCountOnApplyHit: 1
+  searchLimit: 64
+  preferUnmarkedTarget: 1
+  excludeKilledTarget: 1
+  requireActiveMarkStatus: 1
+  targetGunIndex: -1
+--- !u!114 &1098378492194941500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737182033082160241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perkId: 206
+  perkTier: 2
+  requiredPerkGroups:
+  - anyOfPerkIds:
+    - 203
+  mutuallyExclusivePerkGroups: []
+  flavorText: 
+  description: "\u51FB\u6740\u62E5\u6709\u5370\u8BB0\u7684\u654C\u65B9\u5355\u4F4D\u4F1A\u4E3A\u53E6\u4E00\u540D\u968F\u673A\u654C\u65B9\u5355\u4F4D\u65BD\u52A0\u5370\u8BB0"
