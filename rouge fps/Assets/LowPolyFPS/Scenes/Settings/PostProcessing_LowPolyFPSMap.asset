@@ -62,6 +62,64 @@ MonoBehaviour:
   bladeRotation:
     m_OverrideState: 1
     m_Value: 56
+--- !u!114 &-6629682990817911095
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7969232a53c3c2148a7764600324f3ae, type: 3}
+  m_Name: TubeDistortion
+  m_EditorClassIdentifier: 
+  active: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 0
+  amount:
+    m_OverrideState: 1
+    m_Value: 1
+  shader: {fileID: 4800000, guid: 2270ba0b69c63bc459598cad50f09a1d, type: 3}
+--- !u!114 &-6543149957572664374
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aca6b5f0da8ca64cb69109b860c1891, type: 3}
+  m_Name: LightStreaks
+  m_EditorClassIdentifier: 
+  active: 1
+  quality:
+    m_OverrideState: 1
+    m_Value: 1
+  debug:
+    m_OverrideState: 0
+    m_Value: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1
+  luminanceThreshold:
+    m_OverrideState: 1
+    m_Value: 1
+  direction:
+    m_OverrideState: 1
+    m_Value: -0.51
+  blur:
+    m_OverrideState: 1
+    m_Value: 10
+  iterations:
+    m_OverrideState: 1
+    m_Value: 2
+  downscaling:
+    m_OverrideState: 0
+    m_Value: 2
+  shader: {fileID: 4800000, guid: d444b7563e196ad43a619f5bb395ffdb, type: 3}
 --- !u!114 &-6345437678972182706
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -84,6 +142,33 @@ MonoBehaviour:
   gain:
     m_OverrideState: 1
     m_Value: {x: 0.9186613, y: 0.93573105, z: 1, w: -1.1365357e-11}
+--- !u!114 &-4117283731922782797
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bddbf4eb73a0224db0d391ab843f7ff, type: 3}
+  m_Name: Danger
+  m_EditorClassIdentifier: 
+  active: 0
+  overlayTex:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: bd7c1e9493bbf9442aa1a36ed8f8b23e, type: 3}
+    dimension: 1
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0.66, g: 0, b: 0, a: 1}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  size:
+    m_OverrideState: 1
+    m_Value: 0
+  shader: {fileID: 4800000, guid: 1c818ca9da4e68a44b506ad8c87e9c49, type: 3}
 --- !u!114 &-3827693041059707192
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -201,6 +286,10 @@ MonoBehaviour:
   - {fileID: -6345437678972182706}
   - {fileID: 4235813833221547466}
   - {fileID: -7054956614704253386}
+  - {fileID: 7770667616222482009}
+  - {fileID: -6629682990817911095}
+  - {fileID: -4117283731922782797}
+  - {fileID: -6543149957572664374}
 --- !u!114 &1621175195404764783
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -267,3 +356,26 @@ MonoBehaviour:
   tint:
     m_OverrideState: 1
     m_Value: 7.5
+--- !u!114 &7770667616222482009
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae979ba049e535429dde8ab92b28488, type: 3}
+  m_Name: Scanlines
+  m_EditorClassIdentifier: 
+  active: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.136
+  amount:
+    m_OverrideState: 1
+    m_Value: 378
+  speed:
+    m_OverrideState: 1
+    m_Value: 0.1
+  shader: {fileID: 4800000, guid: 9a37ab67e535e704b8e007d86c2be9ff, type: 3}

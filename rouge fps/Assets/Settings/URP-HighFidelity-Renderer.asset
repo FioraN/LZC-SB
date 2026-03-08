@@ -14,6 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 0
   settings: {fileID: 11400000, guid: f68defe9b6889484787a8d20c715e802, type: 2}
+--- !u!114 &-6486927299432155346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e145efbf4714542a66f8e60a4ebfc3, type: 3}
+  m_Name: '[SCPE] DangerRenderer'
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    executionOrder: 0
+    alwaysEnable: 0
+    cameraTypes: 5
 --- !u!114 &-2302875255382185916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +157,10 @@ MonoBehaviour:
   - {fileID: 1674309201421626224}
   - {fileID: 5409050543515341188}
   - {fileID: -7761730210508289984}
+  - {fileID: 6636369515843861216}
+  - {fileID: 4973929268792531778}
+  - {fileID: -6486927299432155346}
+  - {fileID: 1215755672568097231}
   m_RendererFeatureMap: adc0de57c6d2eee587d3fea9468dee193c212716f97bdff393637585a18f6bf113c6180e4bea5216b6f23a3593aeb3fe706be70a59573c1784915d9acfce104b
   m_UseNativeRenderPass: 1
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -189,6 +210,23 @@ MonoBehaviour:
   m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &1215755672568097231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6ccf04602df664fa8dcf324b69b67d, type: 3}
+  m_Name: '[SCPE] LightStreaksRenderer'
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    executionOrder: 0
+    alwaysEnable: 0
+    cameraTypes: 5
 --- !u!114 &1608605625004639763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +278,23 @@ MonoBehaviour:
     executionOrder: 0
     alwaysEnable: 0
     cameraTypes: 5
+--- !u!114 &4973929268792531778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49ceeae970dfce4e9e021870908492b, type: 3}
+  m_Name: '[SCPE] TubeDistortionRenderer'
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    executionOrder: 0
+    alwaysEnable: 0
+    cameraTypes: 3
 --- !u!114 &5409050543515341188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,3 +309,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings: {fileID: 11400000, guid: 6a9ce4523839c4a44a17d8d1334b16d2, type: 2}
+--- !u!114 &6636369515843861216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a529de71a3723409dc5bcc5e30cf8c, type: 3}
+  m_Name: '[SCPE] ScanlinesRenderer'
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    executionOrder: 0
+    alwaysEnable: 0
+    cameraTypes: 5
