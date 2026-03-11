@@ -1,49 +1,102 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+<<<<<<< Updated upstream
+=======
+[RequireComponent(typeof(MonsterHealth))]
+>>>>>>> Stashed changes
 public class MonsterBase : MonoBehaviour
 {
     [Header("Base Stats")]
     public MonsterType type;
+<<<<<<< Updated upstream
     public float hp = 100f;
     
+=======
+    [Header("ç§»åŠ¨é€Ÿåº¦")]
+    public float speed = 5;
+    [Header("æ”»å‡»åŠ›")]
+    public float attack = 15;
+>>>>>>> Stashed changes
 
-    [Header("¸ĞÖªÉèÖÃ")]
-    [Tooltip("Ë÷µĞ·¶Î§£º¹ÖÎïÎ´·¢ÏÖÍæ¼ÒÊ±£¬ÄÜ¿´µ½Íæ¼ÒµÄ¾àÀë")]
+    [Header("æ„ŸçŸ¥è®¾ç½®")]
+    [Tooltip("ç´¢æ•ŒèŒƒå›´ï¼šæ€ªç‰©æœªå‘ç°ç©å®¶æ—¶ï¼Œèƒ½çœ‹åˆ°ç©å®¶çš„è·ç¦»")]
     public float viewRange = 8f;
 
+<<<<<<< Updated upstream
     [Tooltip("×·»÷·¶Î§£º¹ÖÎï·¢ÏÖÍæ¼Òºó£¬ÄÜ³ÖĞø×·×ÙµÄ×î´ó¾àÀë")]
+=======
+    [Header("æ„ŸçŸ¥è§’åº¦")]
+    [Range(0, 360)]
+    public float viewAngle = 120f;
+
+    [Tooltip("è¿½å‡»èŒƒå›´ï¼šæ€ªç‰©å‘ç°ç©å®¶åï¼Œèƒ½æŒç»­è¿½è¸ªçš„æœ€å¤§è·ç¦»")]
+>>>>>>> Stashed changes
     public float chaseRange = 15f;
 
-    [Header("¹¥»÷·¶Î§")]
+    [Header("æ”»å‡»èŒƒå›´")]
     public float attackRange = 2f;
-    [Header("¹¥»÷ÀäÈ´Ê±¼ä")]
+    [Header("æ”»å‡»å†·å´æ—¶é—´")]
     public float attackCooldown = 1.5f;
 
+<<<<<<< Updated upstream
+=======
+    [Header("å¯»è·¯è„±å›°")]
+    [Tooltip("æ€ªç‰©æœ‰è·¯å¾„ä½†é€Ÿåº¦é•¿æœŸæ¥è¿‘ 0 æ—¶ï¼Œåˆ¤å®šä¸ºå¡ä½ã€‚")]
+    public float stuckVelocityThreshold = 0.08f;
+    [Tooltip("æŒç»­å¤šä¹…å‡ ä¹ä¸åŠ¨ï¼Œå¼€å§‹æ‰§è¡Œè„±å›°ã€‚")]
+    public float stuckRecoverDelay = 0.75f;
+    [Tooltip("è„±å›°æ—¶åœ¨å½“å‰ä½ç½®é™„è¿‘é‡‡æ · NavMesh çš„åŠå¾„ã€‚")]
+    public float navMeshRecoverRadius = 1.5f;
+
+    [Header("å‡è·³è·ƒ")]
+    [Tooltip("å‰æ–¹é«˜ä½å·®ä¸è¶…è¿‡è¿™ä¸ªå€¼æ—¶ï¼Œæ€ªç‰©ä¼šå°è¯•å‡è·³è·ƒã€‚")]
+    public float maxJumpHeightDifference = 1.2f;
+    [Tooltip("é«˜ä½å·®è‡³å°‘è¶…è¿‡è¿™ä¸ªå€¼æ‰è§¦å‘è·³è·ƒï¼Œé¿å…å¹³åœ°ä¹±è·³ã€‚")]
+    public float minJumpHeightDifference = 0.25f;
+    [Tooltip("æ²¿ç§»åŠ¨æ–¹å‘å‘å‰æ£€æµ‹çš„è·ç¦»ã€‚")]
+    public float jumpForwardCheckDistance = 1.2f;
+    [Tooltip("å‡è·³è·ƒçš„æŠ›ç‰©çº¿é«˜åº¦ã€‚")]
+    public float jumpArcHeight = 0.8f;
+    [Tooltip("å‡è·³è·ƒæŒç»­æ—¶é—´ã€‚")]
+    public float jumpDuration = 0.35f;
+    [Tooltip("ä¸¤æ¬¡è·³è·ƒä¹‹é—´çš„å†·å´æ—¶é—´ã€‚")]
+    public float jumpCooldown = 0.75f;
+
+>>>>>>> Stashed changes
     [HideInInspector] public bool isHurt = false;
-    [HideInInspector] public bool hasAggro = false; // ÊÇ·ñÒÑ·¢ÏÖµĞÈË
-    protected bool isDead = false;//ÊÇ·ñËÀÍö
+    [HideInInspector] public bool hasAggro = false;
+    [HideInInspector] public bool isJumping = false;
+    protected bool isDead = false;
     [HideInInspector] public NavMeshAgent agent;
 
+    protected MonsterHealth monsterHealth;
     protected float lastAttackTime;
     [HideInInspector] public Transform playerTransform;
     protected Node rootNode;
-
-
-
+    private float stuckTimer;
+    private float lastJumpTime = -999f;
 
     protected virtual void Awake()
     {
+        monsterHealth = GetComponent<MonsterHealth>();
         agent = GetComponent<NavMeshAgent>();
         if (agent != null)
         {
             agent.updateRotation = true;
             agent.updatePosition = true;
         }
+
+        HookHealthEvents(true);
+    }
+
+    protected virtual void OnDestroy()
+    {
+        HookHealthEvents(false);
     }
 
     protected virtual void Start()
@@ -71,14 +124,46 @@ public class MonsterBase : MonoBehaviour
 
     protected virtual void Update()
     {
-
-        if (isDead) return;//¼ì²âËÀÍö
+        if (isDead) return;
+        if (isJumping) return;
 
         CheckAggroState();
 
         if (rootNode != null)
         {
             rootNode.Evaluate();
+        }
+
+        TryStartFakeJump();
+        MonitorAgentStuckState();
+    }
+
+    protected virtual void HandleDamaged(DamageInfo info)
+    {
+        if (isDead) return;
+
+        isHurt = true;
+        hasAggro = true;
+    }
+
+    protected virtual void HandleHealthDied()
+    {
+        Die();
+    }
+
+    private void HookHealthEvents(bool subscribe)
+    {
+        if (monsterHealth == null) return;
+
+        if (subscribe)
+        {
+            monsterHealth.Damaged += HandleDamaged;
+            monsterHealth.Died += HandleHealthDied;
+        }
+        else
+        {
+            monsterHealth.Damaged -= HandleDamaged;
+            monsterHealth.Died -= HandleHealthDied;
         }
     }
 
@@ -90,21 +175,25 @@ public class MonsterBase : MonoBehaviour
 
         if (hasAggro)
         {
-            // Èç¹ûÍæ¼ÒÅÜ³öÁË×·»÷·¶Î§
             if (distanceToPlayer > chaseRange)
             {
                 hasAggro = false;
                 Debug.Log($"{name} lost target. Returning to patrol.");
-                OnLostTarget(); // ´¥·¢ÍÑÕ½Âß¼­
+                OnLostTarget();
             }
         }
         else
         {
-            // Ö»ÓĞµ±Íæ¼Ò½øÈëÊÓÏß·¶Î§(viewRange)²Å»á±»ÖØĞÂ¼¤Å­
-            // Ö®Ç°µÄ Detection Check ½ÚµãÒ²»á×öÕâ¸ö¼ì²é£¬ÕâÀïÊÇË«ÖØ±£ÏÕ
             if (distanceToPlayer <= viewRange)
             {
+<<<<<<< Updated upstream
                 if (!hasAggro)
+=======
+                Vector3 dirToPlayer = (playerTransform.position - transform.position).normalized;
+                float angle = Vector3.Angle(transform.forward, dirToPlayer);
+
+                if (angle <= viewAngle * 0.5f)
+>>>>>>> Stashed changes
                 {
                     hasAggro = true;
                     Debug.Log($"{name} spotted player! Engaging.");
@@ -113,19 +202,172 @@ public class MonsterBase : MonoBehaviour
         }
     }
 
-    // ĞÂÔö£ºµ±¶ªÊ§Ä¿±êÊ±´¥·¢£¬×ÓÀà¿ÉÒÔÖØĞ´´Ë·½·¨À´ÖØÖÃÑ²Âßµã
     protected virtual void OnLostTarget()
     {
         if (agent != null && agent.isActiveAndEnabled)
         {
-            agent.ResetPath(); // Á¢¼´Í£Ö¹×·»÷ÒÆ¶¯
+            agent.ResetPath();
         }
     }
 
     protected virtual void SetupBehaviorTree() { }
 
+    private void TryStartFakeJump()
+    {
+        if (agent == null || !agent.isActiveAndEnabled || !agent.isOnNavMesh) return;
+        if (Time.time - lastJumpTime < jumpCooldown) return;
+        if (agent.isStopped || agent.pathPending || !agent.hasPath) return;
+        if (agent.remainingDistance <= agent.stoppingDistance + 0.15f) return;
+        if (agent.desiredVelocity.sqrMagnitude <= 0.04f) return;
 
-    // ³¢ÊÔÖ´ĞĞ¹¥»÷£¬ÄÚ²¿»á¼ì²éÀäÈ´Ê±¼äºÍ³¯Ïòµ÷Õû
+        Vector3 moveDir = agent.desiredVelocity.normalized;
+        Vector3 sampleOrigin = transform.position + moveDir * jumpForwardCheckDistance;
+
+        if (!NavMesh.SamplePosition(sampleOrigin, out NavMeshHit hit, agent.radius + 0.8f, NavMesh.AllAreas))
+        {
+            return;
+        }
+
+        float heightDelta = hit.position.y - transform.position.y;
+        float absHeightDelta = Mathf.Abs(heightDelta);
+
+        if (absHeightDelta < minJumpHeightDifference || absHeightDelta > maxJumpHeightDifference)
+        {
+            return;
+        }
+
+        Vector3 horizontalOffset = new Vector3(
+            hit.position.x - transform.position.x,
+            0f,
+            hit.position.z - transform.position.z
+        );
+
+        if (horizontalOffset.sqrMagnitude < 0.09f || horizontalOffset.sqrMagnitude > (jumpForwardCheckDistance + 0.8f) * (jumpForwardCheckDistance + 0.8f))
+        {
+            return;
+        }
+
+        if (!CanJumpToward(hit.position))
+        {
+            return;
+        }
+
+        StartCoroutine(FakeJumpTo(hit.position));
+    }
+
+    private bool CanJumpToward(Vector3 targetPosition)
+    {
+        NavMeshPath path = new NavMeshPath();
+        if (!agent.CalculatePath(targetPosition, path))
+        {
+            return false;
+        }
+
+        return path.status != NavMeshPathStatus.PathComplete;
+    }
+
+    private IEnumerator FakeJumpTo(Vector3 targetPosition)
+    {
+        isJumping = true;
+        lastJumpTime = Time.time;
+
+        Vector3 startPosition = transform.position;
+        Vector3 flatTarget = targetPosition;
+
+        if (agent != null && agent.isActiveAndEnabled)
+        {
+            agent.isStopped = true;
+            agent.ResetPath();
+            agent.updatePosition = false;
+            agent.updateRotation = false;
+        }
+
+        float elapsed = 0f;
+        while (elapsed < jumpDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / jumpDuration);
+            Vector3 basePosition = Vector3.Lerp(startPosition, flatTarget, t);
+            float arcOffset = Mathf.Sin(t * Mathf.PI) * jumpArcHeight;
+            transform.position = basePosition + Vector3.up * arcOffset;
+
+            Vector3 lookDir = flatTarget - startPosition;
+            lookDir.y = 0f;
+            if (lookDir.sqrMagnitude > 0.001f)
+            {
+                transform.rotation = Quaternion.LookRotation(lookDir);
+            }
+
+            yield return null;
+        }
+
+        transform.position = flatTarget;
+
+        if (agent != null)
+        {
+            agent.enabled = true;
+            agent.Warp(flatTarget);
+            agent.updatePosition = true;
+            agent.updateRotation = true;
+            agent.isStopped = false;
+        }
+
+        isJumping = false;
+    }
+
+    private void MonitorAgentStuckState()
+    {
+        if (agent == null || !agent.isActiveAndEnabled || !agent.isOnNavMesh)
+        {
+            stuckTimer = 0f;
+            return;
+        }
+
+        if (agent.isStopped || agent.pathPending)
+        {
+            stuckTimer = 0f;
+            return;
+        }
+
+        if (!agent.hasPath || agent.remainingDistance <= agent.stoppingDistance + 0.2f)
+        {
+            stuckTimer = 0f;
+            return;
+        }
+
+        bool wantsToMove = agent.desiredVelocity.sqrMagnitude > 0.01f;
+        bool barelyMoving = agent.velocity.sqrMagnitude <= stuckVelocityThreshold * stuckVelocityThreshold;
+
+        if (!wantsToMove || !barelyMoving)
+        {
+            stuckTimer = 0f;
+            return;
+        }
+
+        stuckTimer += Time.deltaTime;
+        if (stuckTimer < stuckRecoverDelay) return;
+
+        stuckTimer = 0f;
+        RecoverToNearestNavMeshPoint();
+    }
+
+    private void RecoverToNearestNavMeshPoint()
+    {
+        float sampleRadius = Mathf.Max(navMeshRecoverRadius, agent.radius + 0.2f);
+        Vector3 sampleCenter = transform.position;
+
+        if (!NavMesh.SamplePosition(sampleCenter, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas))
+        {
+            if (!NavMesh.SamplePosition(sampleCenter, out hit, sampleRadius * 2f, NavMesh.AllAreas))
+            {
+                return;
+            }
+        }
+
+        agent.Warp(hit.position);
+        agent.ResetPath();
+    }
+
     public bool TryAttack()
     {
         if (Time.time - lastAttackTime >= attackCooldown)
@@ -146,43 +388,21 @@ public class MonsterBase : MonoBehaviour
 
     protected virtual void PerformAttack() { }
 
-
-    // ÊÜµ½ÉËº¦
-    public virtual void TakeDamage(float amount)
-    {
-        if (isDead) return; // ËÀÁË¾Í²»ÔÙÊÜÉË
-
-        hp -= amount;
-        if (!hasAggro) hasAggro = true; // ±»´òÁ¢Âí·´»÷
-
-        if (hp <= 0)
-        {
-            Die();//ËÀÍö
-        }
-        else
-        {
-            isHurt = true;
-        }
-    }
-
-
     protected virtual void Die()
     {
         if (isDead) return;
         isDead = true;
+        isJumping = false;
 
-        // 1. ½ûÓÃÑ°Â·£¬·ÀÖ¹Ê¬Ìå»¬ĞĞ
         if (agent != null)
         {
             agent.isStopped = true;
             agent.enabled = false; 
         }
 
-        // 2. ½ûÓÃÅö×²Ìå£¨¿ÉÑ¡£¬·ÀÖ¹Íæ¼Ò±»Ê¬Ìåµ²×¡Â·£©
         Collider col = GetComponent<Collider>();
         if (col != null) col.enabled = false;
 
-        // 3. ²¥·Å¶¯»­
         Animator ani = GetComponent<Animator>();
         if (ani != null)
         {
@@ -194,20 +414,28 @@ public class MonsterBase : MonoBehaviour
         }
     }
 
-
-    //ËÀÍö¶¯»­½áÊøºóµ÷ÓÃ
     public virtual void OnDeathAnimationEnd()
     {
         Destroy(gameObject);
     }
 
-
-
-
     protected virtual void OnDrawGizmosSelected()
     {
+<<<<<<< Updated upstream
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, viewRange);
+=======
+        Gizmos.color = new Color(1, 1, 0, 0.2f);
+        Gizmos.DrawWireSphere(transform.position, viewRange);
+
+        Vector3 leftDir = Quaternion.Euler(0, -viewAngle * 0.5f, 0) * transform.forward;
+        Vector3 rightDir = Quaternion.Euler(0, viewAngle * 0.5f, 0) * transform.forward;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, transform.position + leftDir * viewRange);
+        Gizmos.DrawLine(transform.position, transform.position + rightDir * viewRange);
+
+>>>>>>> Stashed changes
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.red;

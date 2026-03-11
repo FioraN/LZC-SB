@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
     m_Value: 1
@@ -84,6 +84,36 @@ MonoBehaviour:
   gain:
     m_OverrideState: 1
     m_Value: {x: 0.9186613, y: 0.93573105, z: 1, w: -1.1365357e-11}
+<<<<<<< Updated upstream
+=======
+--- !u!114 &-4117283731922782797
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bddbf4eb73a0224db0d391ab843f7ff, type: 3}
+  m_Name: Danger
+  m_EditorClassIdentifier: 
+  active: 1
+  overlayTex:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: bd7c1e9493bbf9442aa1a36ed8f8b23e, type: 3}
+    dimension: 1
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0.66, g: 0, b: 0, a: 1}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  size:
+    m_OverrideState: 1
+    m_Value: 0
+  shader: {fileID: 4800000, guid: 1c818ca9da4e68a44b506ad8c87e9c49, type: 3}
+>>>>>>> Stashed changes
 --- !u!114 &-3827693041059707192
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -267,3 +297,29 @@ MonoBehaviour:
   tint:
     m_OverrideState: 1
     m_Value: 7.5
+<<<<<<< Updated upstream
+=======
+--- !u!114 &7770667616222482009
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae979ba049e535429dde8ab92b28488, type: 3}
+  m_Name: Scanlines
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.136
+  amount:
+    m_OverrideState: 1
+    m_Value: 378
+  speed:
+    m_OverrideState: 1
+    m_Value: 0.1
+  shader: {fileID: 4800000, guid: 9a37ab67e535e704b8e007d86c2be9ff, type: 3}
+>>>>>>> Stashed changes

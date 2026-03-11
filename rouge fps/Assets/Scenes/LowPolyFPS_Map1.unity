@@ -2899,6 +2899,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 92441285}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &94968316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,6 +3020,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94968316}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &100981358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5427,6 +5430,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 185425530}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &185495505
 GameObject:
   m_ObjectHideFlags: 0
@@ -5536,6 +5540,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &189006988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7060,6 +7066,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 262422795}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &264318535
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,6 +7187,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264318535}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &273609365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8042,6 +8051,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 294050545}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &294398663
 GameObject:
   m_ObjectHideFlags: 0
@@ -8119,6 +8129,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294398663}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &298260179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10461,6 +10473,7 @@ GameObject:
   - component: {fileID: 375345246}
   - component: {fileID: 375345245}
   - component: {fileID: 375345244}
+  - component: {fileID: 375345251}
   m_Layer: 0
   m_Name: Monster1
   m_TagString: Untagged
@@ -10481,17 +10494,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   hp: 100
+=======
+  speed: 3
+  attack: 10
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
   viewRange: 8
   chaseRange: 15
   attackRange: 2
   attackCooldown: 1.5
+  stuckVelocityThreshold: 0.08
+  stuckRecoverDelay: 0.75
+  navMeshRecoverRadius: 1.5
+  maxJumpHeightDifference: 1.2
+  minJumpHeightDifference: 0.25
+  jumpForwardCheckDistance: 1.2
+  jumpArcHeight: 0.8
+  jumpDuration: 0.35
+  jumpCooldown: 0.75
   isHurt: 0
   hasAggro: 0
+  isJumping: 0
   agent: {fileID: 0}
   playerTransform: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   speed: 3
   attack: 10
+=======
+  chaseRepathInterval: 0.2
+  chaseTargetMoveThreshold: 0.75
+  chaseTargetSampleRadius: 1.75
+  patrolPointSampleRadius: 1.25
+  recoveryProbeDistance: 1.2
+  noProgressRecoverDelay: 0.75
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!195 &375345245
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10627,6 +10664,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &375345251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375345243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4fc49819bd3a4eb219ddde089b459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  autoFindHitUI: 1
 --- !u!1001 &375804378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11249,6 +11301,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba7c89ce77605ca469e269f2fa82ea79, type: 3}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &388113106
 GameObject:
   m_ObjectHideFlags: 0
@@ -11324,6 +11377,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388113106}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &392640985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12074,6 +12129,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 415665139}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &416900576
 GameObject:
   m_ObjectHideFlags: 0
@@ -12123,6 +12179,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!4 &417793942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 147132961551321412, guid: 4644160a8dc99da4e971d7303702e672,
@@ -15206,6 +15264,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 517924301}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &522079054
 GameObject:
   m_ObjectHideFlags: 0
@@ -15326,6 +15385,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522079054}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &524029813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18042,6 +18103,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 615846497}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
+=======
+--- !u!1001 &623133113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.346644
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.061995268
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.868575
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403574047938295903, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569722304708735121, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Global Volume
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e2b4a12a326c7f488b2691cd3a89f1a, type: 3}
+--- !u!114 &623133114 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 308070560077097963, guid: 5e2b4a12a326c7f488b2691cd3a89f1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 623133113}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &625646782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18656,6 +18800,129 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 642966435}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
+=======
+--- !u!1 &643688527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643688528}
+  - component: {fileID: 643688532}
+  - component: {fileID: 643688531}
+  - component: {fileID: 643688530}
+  - component: {fileID: 643688529}
+  m_Layer: 7
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &643688528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643688527}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.3920002, z: 0}
+  m_LocalScale: {x: 0.84563, y: 1.6277, z: 0.4964}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 947589692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &643688529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643688527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a87a25ee2d6cd47aa3aac9e0760d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: 0
+  damageMultiplier: 1
+--- !u!65 &643688530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643688527}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &643688531
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643688527}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &643688532
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643688527}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &652844725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22698,6 +22965,9 @@ GameObject:
   - component: {fileID: 794532591}
   - component: {fileID: 794532593}
   - component: {fileID: 794532592}
+  - component: {fileID: 794532595}
+  - component: {fileID: 794532594}
+  - component: {fileID: 794532596}
   m_Layer: 0
   m_Name: target
   m_TagString: Untagged
@@ -22785,6 +23055,95 @@ MonoBehaviour:
   isArmored: 1
   inVulnerableWindow: 0
   remainingVulnerableTime: 0
+--- !u!114 &794532594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794532589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6eb14f9faf21940a4298da5e85d526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  speed: 5
+  attack: 15
+  viewRange: 8
+  viewAngle: 120
+  chaseRange: 15
+  attackRange: 2
+  attackCooldown: 1.5
+  stuckVelocityThreshold: 0.08
+  stuckRecoverDelay: 0.75
+  navMeshRecoverRadius: 1.5
+  maxJumpHeightDifference: 1.2
+  minJumpHeightDifference: 0.25
+  jumpForwardCheckDistance: 1.2
+  jumpArcHeight: 0.8
+  jumpDuration: 0.35
+  jumpCooldown: 0.75
+  isHurt: 0
+  hasAggro: 0
+  isJumping: 0
+  agent: {fileID: 0}
+  playerTransform: {fileID: 0}
+  chaseRepathInterval: 0.2
+  chaseTargetMoveThreshold: 0.75
+  chaseTargetSampleRadius: 1.75
+  patrolPointSampleRadius: 1.25
+  recoveryProbeDistance: 1.2
+  noProgressRecoverDelay: 0.75
+--- !u!195 &794532595
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794532589}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!54 &794532596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794532589}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &797773989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25868,6 +26227,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6234f8eb42dd66046a895ada87898bc8, type: 3}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &944041614
 GameObject:
   m_ObjectHideFlags: 0
@@ -25909,12 +26269,324 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &944041617
 CanvasRenderer:
+=======
+--- !u!1 &947589688
+GameObject:
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   m_GameObject: {fileID: 944041614}
   m_CullTransparentMesh: 1
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947589692}
+  - component: {fileID: 947589691}
+  - component: {fileID: 947589690}
+  - component: {fileID: 947589689}
+  - component: {fileID: 947589694}
+  - component: {fileID: 947589693}
+  - component: {fileID: 947589695}
+  m_Layer: 0
+  m_Name: target (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947589689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947589688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba7aa3dbce5d074ab3ae95fd2cbefcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultTickInterval: 0.5
+  minMoveSpeedMultiplier: 0.05
+  minOutgoingDamageMultiplier: 0.1
+  debugStatuses: []
+  debugSummary: 
+  debugMarkSummary: 
+  debugRefreshEveryFrame: 1
+--- !u!114 &947589690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947589688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434fae37e21432c4b8d06cfea6ca24b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxArmor: 200
+  armor: 100
+  mode: 2
+  regenDelay: 2
+  regenRate: 10
+  vulnerableDuration: 3
+  vulnerableHpDamageMultiplier: 1.5
+  breakRestoreMode: 0
+  restoreArmorAmount: 200
+  breakRestoreRate: 20
+  isArmored: 1
+  inVulnerableWindow: 0
+  remainingVulnerableTime: 0
+--- !u!114 &947589691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947589688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4fc49819bd3a4eb219ddde089b459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 1000000
+  hp: 1000
+  autoFindHitUI: 1
+--- !u!4 &947589692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947589688}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.63, y: 3.012, z: -5.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 910678127}
+  - {fileID: 643688528}
+  - {fileID: 1947331398}
+  - {fileID: 337363245}
+  - {fileID: 1350049365}
+  - {fileID: 1145228188}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947589693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947589688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6eb14f9faf21940a4298da5e85d526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  speed: 5
+  attack: 15
+  viewRange: 8
+  viewAngle: 120
+  chaseRange: 15
+  attackRange: 2
+  attackCooldown: 1.5
+  stuckVelocityThreshold: 0.08
+  stuckRecoverDelay: 0.75
+  navMeshRecoverRadius: 1.5
+  maxJumpHeightDifference: 1.2
+  minJumpHeightDifference: 0.25
+  jumpForwardCheckDistance: 1.2
+  jumpArcHeight: 0.8
+  jumpDuration: 0.35
+  jumpCooldown: 0.75
+  isHurt: 0
+  hasAggro: 0
+  isJumping: 0
+  agent: {fileID: 0}
+  playerTransform: {fileID: 0}
+  chaseRepathInterval: 0.2
+  chaseTargetMoveThreshold: 0.75
+  chaseTargetSampleRadius: 1.75
+  patrolPointSampleRadius: 1.25
+  recoveryProbeDistance: 1.2
+  noProgressRecoverDelay: 0.75
+--- !u!195 &947589694
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947589688}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!54 &947589695
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947589688}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &956491593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956491594}
+  - component: {fileID: 956491598}
+  - component: {fileID: 956491597}
+  - component: {fileID: 956491596}
+  - component: {fileID: 956491595}
+  m_Layer: 7
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &956491594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956491593}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.3920002, z: 0}
+  m_LocalScale: {x: 0.84563, y: 1.6277, z: 0.4964}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2082438447}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956491595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956491593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a87a25ee2d6cd47aa3aac9e0760d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: 0
+  damageMultiplier: 1
+--- !u!65 &956491596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956491593}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &956491597
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956491593}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &956491598
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956491593}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &957079778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27190,6 +27862,129 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6234f8eb42dd66046a895ada87898bc8, type: 3}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
+=======
+--- !u!1 &1012331560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012331561}
+  - component: {fileID: 1012331565}
+  - component: {fileID: 1012331564}
+  - component: {fileID: 1012331563}
+  - component: {fileID: 1012331562}
+  m_Layer: 6
+  m_Name: head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012331561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012331560}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0151966, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2082438447}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1012331562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012331560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a87a25ee2d6cd47aa3aac9e0760d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: 1
+  damageMultiplier: 2
+--- !u!135 &1012331563
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012331560}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1012331564
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012331560}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1012331565
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012331560}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &1020007823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28552,6 +29347,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 311322615}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &1071028078
 GameObject:
   m_ObjectHideFlags: 0
@@ -28672,6 +29468,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071028078}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &1072592597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30435,15 +31233,15 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_UseGeometry: 0
   m_DefaultArea: 0
-  m_GenerateLinks: 0
+  m_GenerateLinks: 1
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.29999998
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ae2593ff75a3a21469b0e04c76c3da19, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 399e3e73c9451a44c99846e740d95ca4, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1144673761
 PrefabInstance:
@@ -34661,11 +35459,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   - component: {fileID: 1348830475}
   - component: {fileID: 1348830477}
   - component: {fileID: 1348830476}
   m_Layer: 5
   m_Name: left
+=======
+  - component: {fileID: 1347370651}
+  - component: {fileID: 1347370650}
+  - component: {fileID: 1347370649}
+  - component: {fileID: 1347370648}
+  - component: {fileID: 1347370653}
+  - component: {fileID: 1347370652}
+  - component: {fileID: 1347370654}
+  m_Layer: 0
+  m_Name: target (2)
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34726,8 +35536,155 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   m_GameObject: {fileID: 1348830474}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 1347370647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434fae37e21432c4b8d06cfea6ca24b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxArmor: 200
+  armor: 100
+  mode: 2
+  regenDelay: 2
+  regenRate: 10
+  vulnerableDuration: 3
+  vulnerableHpDamageMultiplier: 1.5
+  breakRestoreMode: 0
+  restoreArmorAmount: 200
+  breakRestoreRate: 20
+  isArmored: 1
+  inVulnerableWindow: 0
+  remainingVulnerableTime: 0
+--- !u!114 &1347370650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347370647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4fc49819bd3a4eb219ddde089b459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 1000000
+  hp: 1000
+  autoFindHitUI: 1
+--- !u!4 &1347370651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347370647}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.25, y: 3.012, z: 22.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 588163255}
+  - {fileID: 211837975}
+  - {fileID: 965276427}
+  - {fileID: 278580233}
+  - {fileID: 468098281}
+  - {fileID: 904928689}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347370652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347370647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6eb14f9faf21940a4298da5e85d526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  speed: 5
+  attack: 15
+  viewRange: 8
+  viewAngle: 120
+  chaseRange: 15
+  attackRange: 2
+  attackCooldown: 1.5
+  stuckVelocityThreshold: 0.08
+  stuckRecoverDelay: 0.75
+  navMeshRecoverRadius: 1.5
+  maxJumpHeightDifference: 1.2
+  minJumpHeightDifference: 0.25
+  jumpForwardCheckDistance: 1.2
+  jumpArcHeight: 0.8
+  jumpDuration: 0.35
+  jumpCooldown: 0.75
+  isHurt: 0
+  hasAggro: 0
+  isJumping: 0
+  agent: {fileID: 0}
+  playerTransform: {fileID: 0}
+  chaseRepathInterval: 0.2
+  chaseTargetMoveThreshold: 0.75
+  chaseTargetSampleRadius: 1.75
+  patrolPointSampleRadius: 1.25
+  recoveryProbeDistance: 1.2
+  noProgressRecoverDelay: 0.75
+--- !u!195 &1347370653
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347370647}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!54 &1347370654
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347370647}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1 &1349324412
 GameObject:
   m_ObjectHideFlags: 0
@@ -36377,6 +37334,7 @@ GameObject:
   - component: {fileID: 1406028350}
   - component: {fileID: 1406028349}
   - component: {fileID: 1406028356}
+  - component: {fileID: 1406028357}
   m_Layer: 0
   m_Name: Monster2
   m_TagString: Untagged
@@ -36397,13 +37355,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   hp: 100
+=======
+  speed: 5
+  attack: 15
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
   viewRange: 8
   chaseRange: 15
   attackRange: 5
   attackCooldown: 1.5
+  stuckVelocityThreshold: 0.08
+  stuckRecoverDelay: 0.75
+  navMeshRecoverRadius: 1.5
+  maxJumpHeightDifference: 1.2
+  minJumpHeightDifference: 0.25
+  jumpForwardCheckDistance: 1.2
+  jumpArcHeight: 0.8
+  jumpDuration: 0.35
+  jumpCooldown: 0.75
   isHurt: 0
   hasAggro: 0
+  isJumping: 0
   agent: {fileID: 0}
   playerTransform: {fileID: 0}
   speed: 5
@@ -36568,6 +37541,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1406028357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406028348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4fc49819bd3a4eb219ddde089b459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  autoFindHitUI: 1
 --- !u!1001 &1406168821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43679,6 +44667,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 411689804}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &1691773263
 GameObject:
   m_ObjectHideFlags: 0
@@ -43799,6 +44788,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691773263}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &1696160477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43982,6 +44973,200 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1697648253}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
+=======
+--- !u!1 &1697831507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697831511}
+  - component: {fileID: 1697831510}
+  - component: {fileID: 1697831509}
+  - component: {fileID: 1697831508}
+  - component: {fileID: 1697831513}
+  - component: {fileID: 1697831512}
+  - component: {fileID: 1697831514}
+  m_Layer: 0
+  m_Name: target (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1697831508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697831507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba7aa3dbce5d074ab3ae95fd2cbefcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultTickInterval: 0.5
+  minMoveSpeedMultiplier: 0.05
+  minOutgoingDamageMultiplier: 0.1
+  debugStatuses: []
+  debugSummary: 
+  debugMarkSummary: 
+  debugRefreshEveryFrame: 1
+--- !u!114 &1697831509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697831507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434fae37e21432c4b8d06cfea6ca24b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxArmor: 200
+  armor: 100
+  mode: 2
+  regenDelay: 2
+  regenRate: 10
+  vulnerableDuration: 3
+  vulnerableHpDamageMultiplier: 1.5
+  breakRestoreMode: 0
+  restoreArmorAmount: 200
+  breakRestoreRate: 20
+  isArmored: 1
+  inVulnerableWindow: 0
+  remainingVulnerableTime: 0
+--- !u!114 &1697831510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697831507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4fc49819bd3a4eb219ddde089b459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 1000000
+  hp: 1000
+  autoFindHitUI: 1
+--- !u!4 &1697831511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697831507}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.11, y: 3.012, z: 19.705}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1142614959}
+  - {fileID: 1238576252}
+  - {fileID: 828234138}
+  - {fileID: 1120822226}
+  - {fileID: 349381350}
+  - {fileID: 467432797}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1697831512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697831507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6eb14f9faf21940a4298da5e85d526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  speed: 5
+  attack: 15
+  viewRange: 8
+  viewAngle: 120
+  chaseRange: 15
+  attackRange: 2
+  attackCooldown: 1.5
+  stuckVelocityThreshold: 0.08
+  stuckRecoverDelay: 0.75
+  navMeshRecoverRadius: 1.5
+  maxJumpHeightDifference: 1.2
+  minJumpHeightDifference: 0.25
+  jumpForwardCheckDistance: 1.2
+  jumpArcHeight: 0.8
+  jumpDuration: 0.35
+  jumpCooldown: 0.75
+  isHurt: 0
+  hasAggro: 0
+  isJumping: 0
+  agent: {fileID: 0}
+  playerTransform: {fileID: 0}
+  chaseRepathInterval: 0.2
+  chaseTargetMoveThreshold: 0.75
+  chaseTargetSampleRadius: 1.75
+  patrolPointSampleRadius: 1.25
+  recoveryProbeDistance: 1.2
+  noProgressRecoverDelay: 0.75
+--- !u!195 &1697831513
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697831507}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!54 &1697831514
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697831507}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &1698094869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48087,6 +49272,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1829467951}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &1832597456
 GameObject:
   m_ObjectHideFlags: 0
@@ -48207,6 +49393,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832597456}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!4 &1836402580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6700448192811513105, guid: ff813ac6025a19e43875eaadcf7a4efc,
@@ -53557,11 +54745,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   - component: {fileID: 2086023299}
   - component: {fileID: 2086023301}
   - component: {fileID: 2086023300}
   m_Layer: 5
   m_Name: coin
+=======
+  - component: {fileID: 2082438447}
+  - component: {fileID: 2082438446}
+  - component: {fileID: 2082438445}
+  - component: {fileID: 2082438444}
+  - component: {fileID: 2082438449}
+  - component: {fileID: 2082438448}
+  - component: {fileID: 2082438450}
+  m_Layer: 0
+  m_Name: target (3)
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53581,17 +54781,22 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 239715881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.2146862, y: -57.7}
   m_SizeDelta: {x: 3768.32, y: 3768.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086023300
+=======
+--- !u!114 &2082438448
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   m_GameObject: {fileID: 2086023298}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -53618,12 +54823,96 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &2086023301
 CanvasRenderer:
+=======
+  m_GameObject: {fileID: 2082438443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6eb14f9faf21940a4298da5e85d526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  speed: 5
+  attack: 15
+  viewRange: 8
+  viewAngle: 120
+  chaseRange: 15
+  attackRange: 2
+  attackCooldown: 1.5
+  stuckVelocityThreshold: 0.08
+  stuckRecoverDelay: 0.75
+  navMeshRecoverRadius: 1.5
+  maxJumpHeightDifference: 1.2
+  minJumpHeightDifference: 0.25
+  jumpForwardCheckDistance: 1.2
+  jumpArcHeight: 0.8
+  jumpDuration: 0.35
+  jumpCooldown: 0.75
+  isHurt: 0
+  hasAggro: 0
+  isJumping: 0
+  agent: {fileID: 0}
+  playerTransform: {fileID: 0}
+  chaseRepathInterval: 0.2
+  chaseTargetMoveThreshold: 0.75
+  chaseTargetSampleRadius: 1.75
+  patrolPointSampleRadius: 1.25
+  recoveryProbeDistance: 1.2
+  noProgressRecoverDelay: 0.75
+--- !u!195 &2082438449
+NavMeshAgent:
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   m_GameObject: {fileID: 2086023298}
   m_CullTransparentMesh: 1
+=======
+  m_GameObject: {fileID: 2082438443}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!54 &2082438450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082438443}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &2087265001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54223,6 +55512,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2108760518}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!1 &2115669781
 GameObject:
   m_ObjectHideFlags: 0
@@ -54343,6 +55633,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115669781}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1001 &2137327735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54796,6 +56088,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5dbda33114923d4fbc04b072d579b99, type: 3}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
 --- !u!23 &82715079229829813
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56918,6 +58211,9 @@ MonoBehaviour:
   reloadEndTime: 0.25
   insertCountPerStep: 1
 --- !u!1001 &6984036128423290513
+=======
+--- !u!1001 &7489935982621578011
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -56925,6 +58221,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527051434680989, guid: 172f9386e5ef58a49a21a05b76f23f37,
         type: 3}
       propertyPath: walkSpeed
@@ -57136,40 +58433,88 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5561527052524631115, guid: 172f9386e5ef58a49a21a05b76f23f37,
+=======
+    - target: {fileID: 4087825278821769643, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.05096
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6204697
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.648663
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527052524631115, guid: 172f9386e5ef58a49a21a05b76f23f37,
+=======
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527052524631115, guid: 172f9386e5ef58a49a21a05b76f23f37,
+=======
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527052524631115, guid: 172f9386e5ef58a49a21a05b76f23f37,
+=======
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527052524631115, guid: 172f9386e5ef58a49a21a05b76f23f37,
+=======
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527052524631115, guid: 172f9386e5ef58a49a21a05b76f23f37,
+=======
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527052524631115, guid: 172f9386e5ef58a49a21a05b76f23f37,
+=======
+    - target: {fileID: 4312939485240829047, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
     - target: {fileID: 5561527052543656952, guid: 172f9386e5ef58a49a21a05b76f23f37,
         type: 3}
       propertyPath: m_IsActive
@@ -57997,11 +59342,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+=======
+    - target: {fileID: 4516156784931854039, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae,
+        type: 3}
+      propertyPath: adsVolume
+      value: 
+      objectReference: {fileID: 623133114}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1aca3bbf815a4fe44b0dbb5adfa193ae, type: 3}
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 315136621}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   - {fileID: 416900578}
   - {fileID: 1237077186}
   - {fileID: 186969780}
@@ -58013,6 +59371,9 @@ SceneRoots:
   - {fileID: 5362729218921156341}
   - {fileID: 2397194590632208051}
   - {fileID: 6984036128423290513}
+=======
+  - {fileID: 1237077186}
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity
   - {fileID: 1791127439}
   - {fileID: 794532590}
   - {fileID: 827923589}
@@ -58026,4 +59387,9 @@ SceneRoots:
   - {fileID: 1406028355}
   - {fileID: 700450655}
   - {fileID: 369275663}
+<<<<<<< Updated upstream:rouge fps/Assets/Scenes/LowPolyFPS_Map1.unity
   - {fileID: 1934641465}
+=======
+  - {fileID: 7489935982621578011}
+  - {fileID: 623133113}
+>>>>>>> Stashed changes:rouge fps/Assets/Scenes/lzcworkplace.unity

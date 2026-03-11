@@ -1,10 +1,7 @@
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using UnityEngine.AI;
-// 近战攻击怪物：会在一定范围内追击玩家，脱战后回最近的巡逻点
-public class Monster1 : MonsterBase
+// Keep the existing class name so current prefabs and scenes continue to work.
+public class Monster1 : Monster1Optimized
 {
+<<<<<<< Updated upstream
     private Animator ani;
     public float speed = 3;
     public float attack = 10;// 近战攻击力
@@ -130,3 +127,6 @@ public class Monster1 : MonsterBase
 
     
 }
+=======
+}
+>>>>>>> Stashed changes

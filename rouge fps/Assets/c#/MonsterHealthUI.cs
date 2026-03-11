@@ -16,6 +16,9 @@ public class MonsterHealth : MonoBehaviour, IDamageable, IDamageableEx, IDamagea
     private CameraGunChannel _lastHitSource;
     private float _lastHitTime;
 
+    public event System.Action<DamageInfo> Damaged;
+    public event System.Action Died;
+
     public CameraGunChannel LastHitSource => _lastHitSource;
     public float LastHitTime => _lastHitTime;
 
@@ -99,6 +102,8 @@ public class MonsterHealth : MonoBehaviour, IDamageable, IDamageableEx, IDamagea
 
         hp = Mathf.Max(0f, hp - info.damage);
 
+        Damaged?.Invoke(info);
+
         if ((info.flags & DamageFlags.SkipHitEvent) == 0 && info.source != null)
         {
             if (_hitUI == null && autoFindHitUI) TryResolveHitUI();
@@ -143,6 +148,8 @@ public class MonsterHealth : MonoBehaviour, IDamageable, IDamageableEx, IDamagea
             hp = Mathf.Max(0f, hp - hpDamage);
         }
 
+        Damaged?.Invoke(info);
+
         if ((info.flags & DamageFlags.SkipHitEvent) == 0 && info.source != null)
         {
             if (_hitUI == null && autoFindHitUI) TryResolveHitUI();
@@ -158,6 +165,7 @@ public class MonsterHealth : MonoBehaviour, IDamageable, IDamageableEx, IDamagea
         if (!IsDead) return;
 
         _didDie = true;
+        Died?.Invoke();
 
         CombatEventHub.RaiseKill(new CombatEventHub.KillEvent
         {
