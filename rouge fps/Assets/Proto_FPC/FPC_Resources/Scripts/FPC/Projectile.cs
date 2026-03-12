@@ -1,7 +1,7 @@
-//-------------------------------
+﻿//-------------------------------
 //--- Prototype FPC
 //--- Version 1.0
-//--- © The Famous Mouse™
+//--- 漏 The Famous Mouse鈩?
 //-------------------------------
 
 using System.Collections;
@@ -113,7 +113,7 @@ namespace PrototypeFPC
         void CreateProjectile()
         {
             //Initiate projectile
-            if(Input.GetMouseButton(0) && !Input.GetKey(KeyCode.LeftControl) && allowProjectile && !dependencies.isInspecting)
+            if(Input.GetMouseButton(0) && !Input.GetKey(KeyCode.LeftControl) && allowProjectile && !PerkSceneCanvasUI.IsFireBlocked && !dependencies.isInspecting)
             {
                 StartCoroutine(ProjectAtRate());
             }
@@ -149,3 +149,4 @@ namespace PrototypeFPC
         }
     }
 }
+

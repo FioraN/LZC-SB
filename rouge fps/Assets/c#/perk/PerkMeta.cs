@@ -35,6 +35,9 @@ public sealed class PerkMeta : MonoBehaviour
     [TextArea(2, 6)]
     public string description = "";
 
+    [Tooltip("Perk 在选择面板中显示的图标。不填则使用候选面板预制体上的默认图片。")]
+    public Sprite icon;
+
     /// <summary>
     /// 获取最终生效 ID。
     /// 若 perkId 为空，则默认使用 GameObject 名称。
@@ -50,3 +53,5 @@ public sealed class PerkMeta : MonoBehaviour
         }
     }
 }
+
+

@@ -47,6 +47,8 @@ public class CameraGunDual : MonoBehaviour
 
         CacheInputOncePerFrame();
 
+        if (PerkSceneCanvasUI.IsFireBlocked) return false;
+
         bool rawWants = (ch.fireMode == CameraGunChannel.FireMode.Auto)
             ? Input.GetKey(ch.fireKey)
             : Input.GetKeyDown(ch.fireKey);
@@ -566,3 +568,4 @@ public class CameraGunDual : MonoBehaviour
         }
     }
 }
+

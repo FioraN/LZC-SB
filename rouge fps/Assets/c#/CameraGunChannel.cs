@@ -127,7 +127,7 @@ public class CameraGunChannel : MonoBehaviour
         // 是否想开火：交由 Dual 决定，保证半自动能抢占自动
         bool wantsFire = (_dual != null)
             ? _dual.GetWantsFire(this)
-            : (fireMode == FireMode.Auto ? Input.GetKey(fireKey) : Input.GetKeyDown(fireKey));
+            : (!PerkSceneCanvasUI.IsFireBlocked && (fireMode == FireMode.Auto ? Input.GetKey(fireKey) : Input.GetKeyDown(fireKey)));
 
         if (!wantsFire) return;
 
