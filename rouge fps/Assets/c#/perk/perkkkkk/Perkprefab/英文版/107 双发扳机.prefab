@@ -60,11 +60,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Double Trigger
   perkId: 107
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 2
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u6B66\u5668\u5355\u6B21\u5F00\u706B\u53D1\u5C042\u9897\u5B50\u5F39"
+  description: The weapon fires 2 bullets per shot
+  icon: {fileID: 0}

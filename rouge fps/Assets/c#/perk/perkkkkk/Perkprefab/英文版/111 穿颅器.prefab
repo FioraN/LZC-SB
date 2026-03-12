@@ -60,11 +60,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Skull Piercer
   perkId: 111
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 2
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5927\u5E45\u589E\u52A0\u5B50\u5F39\u7206\u5934\u4F24\u5BB3\uFF0C\u51CF\u5C11\u5B50\u5F39\u547D\u4E2D\u80A2\u4F53\u4F24\u5BB3"
+  description: Significantly increase bullet headshot damage and reduce bullet limb
+    hit damage
+  icon: {fileID: 0}

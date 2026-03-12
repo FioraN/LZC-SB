@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Flintlock Gun
   perkId: 7
   perkTier: 1
   isBasePerk: 1
@@ -72,5 +73,6 @@ MonoBehaviour:
     - 6
     - 5
   flavorText: 
-  description: "\u6B66\u5668\u53D8\u4E3A\u5355\u53D1\uFF0C\u624B\u52A8\u4F9B\u5F39\uFF0C\u89E3\u9501\u90E8\u5206\u914D\u4EF6"
+  description: The weapon switches to single-shot, manual feeding, unlocking some
+    attachments
   icon: {fileID: 0}

@@ -68,12 +68,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Blast Chamber
   perkId: 301
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 1
     - 4
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u670920%\u7684\u6982\u7387\u5BF9\u81EA\u8EAB\u9020\u6210\u5F53\u524D\u751F\u547D\u503C10%\u7684\u4F24\u5BB3\uFF0C\u5E76\u5BF9\u4EE5\u5468\u56F4\u7684\u6240\u6709\u654C\u65B9\u5355\u4F4D\u9020\u6210\u4E00\u6B21\u4F24\u5BB3"
+  description: Has a 20% chance to deal damage equal to 10% of its current health
+    to itself, and deal damage once to all enemy units around it
+  icon: {fileID: 0}

@@ -60,11 +60,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: High Speed Chamber
   perkId: 104
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 2
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5B50\u5F39\u4F1A\u8D2F\u7A7F\u547D\u4E2D\u7684\u9996\u4E2A\u654C\u65B9\u5355\u4F4D\uFF0C\u8D2F\u7A7F\u540E\u9020\u6210\u4F24\u5BB3\u51CF\u5C11"
+  description: The bullet will pierce through the first enemy unit it hits, and the
+    damage is reduced after piercing.
+  icon: {fileID: 0}

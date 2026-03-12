@@ -60,11 +60,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Bumper Stock
   perkId: 304
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 4
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u6B66\u5668\u5F00\u706B\u6A21\u5F0F\u53D8\u4E3A\u8FDE\u53D1\uFF0C\u5C04\u901F\u52A0\u6210\u7FFB\u500D"
+  description: The weapon's firing mode has been changed to burst fire, and the rate
+    of fire bonus is doubled.
+  icon: {fileID: 0}

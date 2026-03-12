@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Shotgun Barrel
   perkId: 4
   perkTier: 1
   isBasePerk: 1
@@ -72,5 +73,5 @@ MonoBehaviour:
     - 2
     - 3
   flavorText: 
-  description: "\u6B66\u5668\u53D8\u4E3A\u9730\u5F39\u67AA\uFF0C\u89E3\u9501\u90E8\u5206\u9730\u5F39\u67AA\u914D\u4EF6"
+  description: Weapon changed to shotgun, unlock some shotgun attachments
   icon: {fileID: 0}

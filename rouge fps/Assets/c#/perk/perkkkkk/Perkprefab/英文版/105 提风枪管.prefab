@@ -61,11 +61,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Diphone Barrel
   perkId: 105
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 2
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5927\u5E45\u589E\u52A0\u5C04\u901F\uFF0C\u4F46\u51CF\u5C11\u5B50\u5F39\u4F24\u5BB3"
+  description: Significantly increase firing rate, but reduce bullet damage
+  icon: {fileID: 0}

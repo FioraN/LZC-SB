@@ -59,9 +59,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Compensator
   perkId: 409
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups: []
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5927\u5E45\u51CF\u5C11\u67AA\u68B0\u540E\u5EA7\uFF0C\u63D0\u9AD8\u5C04\u51FB\u7A33\u5B9A\u5EA6"
+  description: Significantly reduce firearm recoil, improve shooting stability
+  icon: {fileID: 0}

@@ -62,12 +62,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Wound Barrel
   perkId: 204
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 1
     - 2
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u6839\u636E\u654C\u4EBA\u7684\u5F02\u5E38\u72B6\u6001\u5C42\u6570\u9020\u6210\u989D\u5916\u4F24\u5BB3\uFF0C\u5F02\u5E38\u72B6\u6001\u603B\u5C42\u6570\u8D8A\u591A\uFF0C\u9020\u6210\u7684\u4F24\u5BB3\u8D8A\u9AD8"
+  description: Deals additional damage based on the enemy's number of abnormal status
+    stacks; the more total abnormal status stacks, the higher the damage dealt.
+  icon: {fileID: 0}

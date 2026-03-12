@@ -68,9 +68,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Electrical Bullet
   perkId: 404
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups: []
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5B50\u5F39\u4F1A\u5BF9\u654C\u65B9\u5355\u4F4D\u65BD\u52A0\u7535\u51FB\u6548\u679C"
+  description: Bullets will apply an electric shock effect to enemy units
+  icon: {fileID: 0}

@@ -60,9 +60,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: 4x Scope
   perkId: 415
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups: []
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "4\u500D\u7784\u51C6\u955C\u914D\u4EF6\t\t"
+  description: 4x Scope Attachment
+  icon: {fileID: 0}

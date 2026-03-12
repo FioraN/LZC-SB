@@ -67,12 +67,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Bounce Barrel
   perkId: 102
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 2
     - 1
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5B50\u5F39\u5728\u547D\u4E2D\u540E\uFF0C\u968F\u673A\u653B\u51FB\u53E6\u4E00\u540D\u654C\u65B9\u5355\u4F4D"
+  description: After the bullet hits, it randomly attacks another enemy unit
+  icon: {fileID: 0}

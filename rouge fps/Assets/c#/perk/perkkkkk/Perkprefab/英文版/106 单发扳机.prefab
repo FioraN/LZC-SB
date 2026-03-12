@@ -64,8 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Single-Tab Trigger
   perkId: 106
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 2
@@ -73,4 +76,6 @@ MonoBehaviour:
     - 6
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u6B66\u5668\u5F00\u706B\u6A21\u5F0F\u53D8\u4E3A\u5355\u53D1\uFF0C\u9501\u5B9A\u5C04\u901F\uFF0C\u635F\u5931\u7684\u5C04\u901F\u8F6C\u5316\u4E3A\u5B50\u5F39\u4F24\u5BB3\u589E\u76CA\t\t"
+  description: Weapon firing mode changes to single shot, locking the rate of fire,
+    and the lost rate of fire is converted into bullet damage increase
+  icon: {fileID: 0}

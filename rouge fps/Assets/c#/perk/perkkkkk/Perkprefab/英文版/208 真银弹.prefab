@@ -64,8 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Sliver Bullet
   perkId: 208
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 1
@@ -73,4 +76,6 @@ MonoBehaviour:
   - anyOfPerkIds:
     - 207
   flavorText: 
-  description: "\u7206\u5934\u9020\u6210\u76EE\u6807\u5F53\u524D\u751F\u547D\u503CN%\u7684\u989D\u5916\u4F24\u5BB3"
+  description: Headshots deal additional damage equal to N% of the target's current
+    health
+  icon: {fileID: 0}

@@ -61,11 +61,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Dual Barrel
   perkId: 307
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 4
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5F39\u5323\u5BB9\u91CF\u53D8\u4E3A2\uFF0C\u73A9\u5BB6\u6BCF\u635F\u59311\u5F39\u5323\u5BB9\u91CF\uFF0C\u83B7\u5F9710%\u4F24\u5BB3\u52A0\u6210"
+  description: Magazine capacity changes to 2, and for each magazine capacity lost,
+    the player gains a 10% damage bonus
+  icon: {fileID: 0}

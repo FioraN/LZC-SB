@@ -59,12 +59,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Eagle Eye Grip
   perkId: 108
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 2
     - 1
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5B50\u5F39\u81EA\u52A8\u8DDF\u8E2A\u654C\u65B9\u5355\u4F4D"
+  description: Bullets automatically track enemy units
+  icon: {fileID: 0}

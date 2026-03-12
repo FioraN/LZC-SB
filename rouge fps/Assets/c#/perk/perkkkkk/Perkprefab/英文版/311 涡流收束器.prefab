@@ -60,11 +60,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Turbo Muzzle
   perkId: 311
   perkTier: 2
+  isBasePerk: 0
+  maxSelectableCount: 1
   requiredPerkGroups:
   - anyOfPerkIds:
     - 4
   mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u5927\u5E45\u51CF\u5C11\u5B50\u5F39\u5DE6\u53F3\u6563\u5E03"
+  description: Significantly reduce the horizontal spread of bullets
+  icon: {fileID: 0}

@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Small Size Barrel
   perkId: 1
   perkTier: 1
   isBasePerk: 1
@@ -81,5 +82,6 @@ MonoBehaviour:
     - 3
     - 4
   flavorText: 
-  description: "\u67AA\u68B0\u5C04\u7A0B\u51CF\u5C11\uFF0C\u5C04\u901F\u5927\u5E45\u589E\u52A0\uFF0C\u4F24\u5BB3\u51CF\u5C11\uFF0C\u89E3\u9501\u90E8\u5206\u5C0F\u53E3\u5F84\u914D\u4EF6"
+  description: Firearm range reduced, rate of fire greatly increased, damage decreased,
+    some small caliber attachments unlocked
   icon: {fileID: 0}

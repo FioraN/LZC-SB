@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perkName: Medium Size Barrel
   perkId: 2
   perkTier: 1
   isBasePerk: 1
@@ -81,5 +82,6 @@ MonoBehaviour:
     - 3
     - 4
   flavorText: 
-  description: "\u67AA\u68B0\u5C04\u7A0B\uFF0C\u5C04\u901F\uFF0C\u4F24\u5BB3\u53D8\u4E3A\u4E2D\u7B49\u6C34\u5E73\uFF0C\u89E3\u9501\u90E8\u5206\u4E2D\u53E3\u5F84\u914D\u4EF6"
+  description: Firearm range, rate of fire, and damage are changed to medium levels,
+    unlocking some medium-caliber attachments
   icon: {fileID: 0}
