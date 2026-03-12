@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3872524971766042548
+--- !u!1 &7814898645869987514
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7850988148663631209}
-  - component: {fileID: 2505594536067751799}
-  - component: {fileID: 3395740656759938697}
+  - component: {fileID: 3129711863329704297}
+  - component: {fileID: 6622605039679046435}
+  - component: {fileID: 3048915975842920763}
   m_Layer: 0
-  m_Name: "7 \u71E7\u53D1\u67AA"
+  m_Name: "101 \u9AD8\u7206\u5B50\u5F39"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7850988148663631209
+--- !u!4 &3129711863329704297
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3872524971766042548}
+  m_GameObject: {fileID: 7814898645869987514}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.2159224, y: -2.0290687, z: -21.165743}
@@ -33,41 +33,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2505594536067751799
+--- !u!114 &6622605039679046435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3872524971766042548}
+  m_GameObject: {fileID: 7814898645869987514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d4d669fa7b1ad418336549a817e8a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 50b32041bac709649afc804f21837af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableIfPrereqMissing: 1
-  overrideFireMode: 1
-  fireMode: 0
-  overrideReloadType: 1
-  reloadType: 1
---- !u!114 &3395740656759938697
+  radius: 2.5
+  explosionDamage: 25
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 192
+  explosionSkipHitEvent: 1
+  explosionVfxPrefab: {fileID: 356964474686017244, guid: 0ae76b2d57ad46244951a5809e0c7e23,
+    type: 3}
+  vfxParent: {fileID: 0}
+  vfxAutoDestroySeconds: 1
+  scaleVfxWithRadius: 1
+--- !u!114 &3048915975842920763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3872524971766042548}
+  m_GameObject: {fileID: 7814898645869987514}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkId: 7
-  perkTier: 1
-  requiredPerkGroups: []
-  mutuallyExclusivePerkGroups:
+  perkId: 101
+  perkTier: 2
+  requiredPerkGroups:
   - anyOfPerkIds:
-    - 6
-    - 5
+    - 2
+  mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u6B66\u5668\u53D8\u4E3A\u5355\u53D1\uFF0C\u624B\u52A8\u4F9B\u5F39\uFF0C\u89E3\u9501\u90E8\u5206\u914D\u4EF6"
+  description: "\u5B50\u5F39\u547D\u4E2D\u654C\u65B9\u5355\u4F4D\u65F6\u9020\u6210\u5C0F\u8303\u56F4\u7206\u70B8"

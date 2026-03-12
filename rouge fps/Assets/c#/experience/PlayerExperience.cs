@@ -7,7 +7,7 @@ using UnityEngine;
 public sealed class PlayerExperience : MonoBehaviour
 {
     [Header("Level")]
-    [Min(1)] public int startLevel = 1;
+    [Min(0)] public int startLevel = 0;
     [Min(0)] public int startExperience = 0;
     [Min(0)] public int startUpgradePoints = 0;
 
@@ -17,7 +17,7 @@ public sealed class PlayerExperience : MonoBehaviour
     [Min(1)] public int pointsPerLevel = 1;
 
     [Header("Debug")]
-    [SerializeField] private int currentLevel = 1;
+    [SerializeField] private int currentLevel;
     [SerializeField] private int currentExperience;
     [SerializeField] private int availableUpgradePoints;
 
@@ -36,7 +36,7 @@ public sealed class PlayerExperience : MonoBehaviour
 
     private void Awake()
     {
-        currentLevel = Mathf.Max(1, startLevel);
+        currentLevel = Mathf.Max(0, startLevel);
         currentExperience = Mathf.Max(0, startExperience);
         availableUpgradePoints = Mathf.Max(0, startUpgradePoints);
 
@@ -75,8 +75,8 @@ public sealed class PlayerExperience : MonoBehaviour
 
     public int GetRequiredExperienceForLevel(int level)
     {
-        int safeLevel = Mathf.Max(1, level);
-        return Mathf.Max(1, baseExperienceRequired + (safeLevel - 1) * experienceGrowthPerLevel);
+        int safeLevel = Mathf.Max(0, level);
+        return Mathf.Max(1, baseExperienceRequired + safeLevel * experienceGrowthPerLevel);
     }
 
     private void ResolvePendingLevelUps()

@@ -166,7 +166,7 @@ public sealed class PlayerExperienceUI : MonoBehaviour
 
     private void HandleLevelChanged(int level)
     {
-        actualLevel = Mathf.Max(1, level);
+        actualLevel = Mathf.Max(0, level);
 
         if (!_isInitialized)
             displayedLevel = actualLevel;
@@ -255,7 +255,7 @@ public sealed class PlayerExperienceUI : MonoBehaviour
     private void UpdateLevelVisual()
     {
         if (levelText != null)
-            levelText.text = string.Format(levelFormat, Mathf.Max(1, displayedLevel));
+            levelText.text = string.Format(levelFormat, Mathf.Max(0, displayedLevel));
     }
 
     private void UpdatePointsVisual(bool immediate = false)

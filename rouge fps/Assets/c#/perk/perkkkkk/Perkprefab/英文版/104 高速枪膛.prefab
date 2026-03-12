@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &333296601395876904
+--- !u!1 &6272255154966382246
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,75 +8,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7534690471162848805}
-  - component: {fileID: 2761044075537631363}
-  - component: {fileID: -299806128855994480}
+  - component: {fileID: 1854065067169662887}
+  - component: {fileID: 8948022121771891939}
+  - component: {fileID: -6903108915990349385}
   m_Layer: 0
-  m_Name: "1 \u5C0F\u53E3\u5F84\u67AA\u7BA1"
+  m_Name: "104 \u9AD8\u901F\u67AA\u819B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7534690471162848805
+--- !u!4 &1854065067169662887
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333296601395876904}
+  m_GameObject: {fileID: 6272255154966382246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2159224, y: -2.0290687, z: -21.165743}
+  m_LocalPosition: {x: 0.6560881, y: 8.352808, z: -8.376114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2761044075537631363
+--- !u!114 &8948022121771891939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333296601395876904}
+  m_GameObject: {fileID: 6272255154966382246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a6f009374c0ffd4b9274db5aee64906, type: 3}
+  m_Script: {fileID: 11500000, guid: ee4c906b64eba99439545e5355ea72e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setDamage: 1
-  damage: 10
-  setMaxRange: 1
-  maxRange: 200
-  setFireRate: 1
-  fireRate: 10
-  setSemiFireCooldown: 1
-  semiFireCooldown: 0.15
-  setBulletSpeed: 1
-  bulletSpeed: 80
-  setRecoil: 0
-  kickPitchPerShot: 1.2
-  kickYawRandom: 0.6
---- !u!114 &-299806128855994480
+  secondHitDamageMultiplier: 1
+  disableIfNotAllowed: 1
+  requirePrerequisites: 1
+--- !u!114 &-6903108915990349385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333296601395876904}
+  m_GameObject: {fileID: 6272255154966382246}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkId: 1
-  perkTier: 1
-  requiredPerkGroups: []
-  mutuallyExclusivePerkGroups:
+  perkId: 104
+  perkTier: 2
+  requiredPerkGroups:
   - anyOfPerkIds:
     - 2
-    - 3
-    - 4
+  mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u67AA\u68B0\u5C04\u7A0B\u51CF\u5C11\uFF0C\u5C04\u901F\u5927\u5E45\u589E\u52A0\uFF0C\u4F24\u5BB3\u51CF\u5C11\uFF0C\u89E3\u9501\u90E8\u5206\u5C0F\u53E3\u5F84\u914D\u4EF6"
+  description: "\u5B50\u5F39\u4F1A\u8D2F\u7A7F\u547D\u4E2D\u7684\u9996\u4E2A\u654C\u65B9\u5355\u4F4D\uFF0C\u8D2F\u7A7F\u540E\u9020\u6210\u4F24\u5BB3\u51CF\u5C11"

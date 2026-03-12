@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &866464218875019758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6580496598531529876}
+  - component: {fileID: 2846144712653898297}
+  - component: {fileID: -4861507582393720910}
+  m_Layer: 0
+  m_Name: "307 \u53CC\u7BA1"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6580496598531529876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866464218875019758}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2846144712653898297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866464218875019758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93026360605a15e4a8af1dce0c35534b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixedMagazineSize: 2
+  damageAddPctPerExtraMag: 0.02
+  priority: 100000
+  targetGunIndex: -1
+--- !u!114 &-4861507582393720910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866464218875019758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perkId: 307
+  perkTier: 2
+  requiredPerkGroups:
+  - anyOfPerkIds:
+    - 4
+  mutuallyExclusivePerkGroups: []
+  flavorText: 
+  description: "\u5F39\u5323\u5BB9\u91CF\u53D8\u4E3A2\uFF0C\u73A9\u5BB6\u6BCF\u635F\u59311\u5F39\u5323\u5BB9\u91CF\uFF0C\u83B7\u5F9710%\u4F24\u5BB3\u52A0\u6210"

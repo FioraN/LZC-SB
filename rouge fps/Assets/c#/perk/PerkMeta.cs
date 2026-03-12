@@ -11,12 +11,24 @@ public sealed class PerkConditionGroup
 public sealed class PerkMeta : MonoBehaviour
 {
     [Header("身份信息")]
+    [Tooltip("Perk 在 UI 中显示的名称。如果为空，则回退到 perkId，再回退到 GameObject 名称。")]
+    public string perkName = "";
+
     [Tooltip("唯一ID，用于前置与互斥检测。如果为空，默认使用 GameObject 名称。")]
     public string perkId = "";
 
     [Header("阶级")]
     [Range(1, 2)]
     public int perkTier = 1;
+
+    [Header("基础 Perk")]
+    [Tooltip("勾选后表示这是基础 perk。可用于控制非基础 perk 的刷新解锁门槛。")]
+    public bool isBasePerk = false;
+
+    [Header("数量")]
+    [Min(1)]
+    [Tooltip("该 perk 在两把枪上总共最多可被选择的次数。达到上限后不再刷新，也不可再装备。")]
+    public int maxSelectableCount = 1;
 
     [Header("前置条件（组间 AND，组内 OR）")]
     [Tooltip("每一组是一个条件；组内任意一个 ID 满足即可；所有组都满足才通过。")]
@@ -46,6 +58,20 @@ public sealed class PerkMeta : MonoBehaviour
     {
         get
         {
+            if (!string.IsNullOrWhiteSpace(perkId))
+                return perkId;
+
+            return gameObject.name;
+        }
+    }
+
+    public string EffectiveDisplayName
+    {
+        get
+        {
+            if (!string.IsNullOrWhiteSpace(perkName))
+                return perkName;
+
             if (!string.IsNullOrWhiteSpace(perkId))
                 return perkId;
 

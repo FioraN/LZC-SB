@@ -337,6 +337,108 @@ public sealed class PerkManager : MonoBehaviour
         return false;
     }
 
+    public int GetOwnedPerkCount(string perkId)
+    {
+        if (string.IsNullOrWhiteSpace(perkId)) return 0;
+
+        return CountPerkInList(selectedPerksGunA, perkId) + CountPerkInList(selectedPerksGunB, perkId);
+    }
+
+    public int GetOwnedBasePerkCount()
+    {
+        return CountBasePerksInList(selectedPerksGunA) + CountBasePerksInList(selectedPerksGunB);
+    }
+
+    public bool HasRemainingSelectableCount(GameObject perkObject)
+    {
+        if (perkObject == null) return false;
+
+        string id = GetPerkId(perkObject);
+        if (string.IsNullOrWhiteSpace(id)) return false;
+
+        int maxCount = GetMaxSelectableCount(perkObject);
+        return GetOwnedPerkCount(id) < maxCount;
+    }
+
+    public bool CanEquipPerkToGun(GameObject perkObject, int gunIndex)
+    {
+        if (perkObject == null) return false;
+
+        string id = GetPerkId(perkObject);
+        if (string.IsNullOrWhiteSpace(id)) return false;
+
+        if (!HasRemainingSelectableCount(perkObject)) return false;
+        if (HasPerk(id, gunIndex)) return false;
+        if (!PrerequisitesMet(perkObject, gunIndex)) return false;
+        if (HasMutualExclusionConflict(perkObject, gunIndex)) return false;
+
+        return true;
+    }
+
+    private static string GetPerkId(GameObject perkObject)
+    {
+        if (perkObject == null) return "";
+
+        var meta = perkObject.GetComponent<PerkMeta>();
+        if (meta != null && !string.IsNullOrWhiteSpace(meta.EffectiveId))
+            return meta.EffectiveId;
+
+        return perkObject.name;
+    }
+
+    private static int GetMaxSelectableCount(GameObject perkObject)
+    {
+        if (perkObject == null) return 1;
+
+        var meta = perkObject.GetComponent<PerkMeta>();
+        if (meta == null) return 1;
+
+        return Mathf.Max(1, meta.maxSelectableCount);
+    }
+
+    private static int CountPerkInList(List<MonoBehaviour> list, string perkId)
+    {
+        if (list == null || string.IsNullOrWhiteSpace(perkId)) return 0;
+
+        int count = 0;
+        for (int i = 0; i < list.Count; i++)
+        {
+            var mb = list[i];
+            if (mb == null) continue;
+
+            var meta = mb.GetComponent<PerkMeta>();
+            if (meta != null)
+            {
+                if (meta.EffectiveId == perkId)
+                    count++;
+            }
+            else if (mb.GetType().Name == perkId)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    private static int CountBasePerksInList(List<MonoBehaviour> list)
+    {
+        if (list == null) return 0;
+
+        int count = 0;
+        for (int i = 0; i < list.Count; i++)
+        {
+            var mb = list[i];
+            if (mb == null) continue;
+
+            var meta = mb.GetComponent<PerkMeta>();
+            if (meta != null && meta.isBasePerk)
+                count++;
+        }
+
+        return count;
+    }
+
     private bool IsAnyOwnedInList(List<string> ids, int gunIndex)
     {
         if (ids == null || ids.Count == 0) return false;
@@ -403,14 +505,10 @@ public sealed class PerkManager : MonoBehaviour
 
         var list = GetPerkList(gunIndex);
 
-        string id = "";
-        var meta = perkInstance.GetComponent<PerkMeta>();
-        if (meta != null) id = meta.EffectiveId;
+        string id = GetPerkId(perkInstance.gameObject);
         if (string.IsNullOrWhiteSpace(id)) id = perkInstance.GetType().Name;
 
-        if (HasPerk(id, gunIndex)) return false;
-        if (!PrerequisitesMet(perkInstance.gameObject, gunIndex)) return false;
-        if (HasMutualExclusionConflict(perkInstance.gameObject, gunIndex)) return false;
+        if (!CanEquipPerkToGun(perkInstance.gameObject, gunIndex)) return false;
 
         list.Add(perkInstance);
 

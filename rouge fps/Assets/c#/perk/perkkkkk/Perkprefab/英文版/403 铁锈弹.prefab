@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5694949213706457851
+--- !u!1 &6546024800087286932
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,66 +8,69 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2023502526325941490}
-  - component: {fileID: 2914347068343669256}
-  - component: {fileID: -5720457904960668997}
+  - component: {fileID: 3760827914931790068}
+  - component: {fileID: 113948617033710091}
+  - component: {fileID: -2460439649498193270}
   m_Layer: 0
-  m_Name: "5 \u72D9\u51FB\u67AA"
+  m_Name: "403 \u94C1\u9508\u5F39"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2023502526325941490
+--- !u!4 &3760827914931790068
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5694949213706457851}
+  m_GameObject: {fileID: 6546024800087286932}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2159224, y: -2.0290687, z: -21.165743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2914347068343669256
+--- !u!114 &113948617033710091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5694949213706457851}
+  m_GameObject: {fileID: 6546024800087286932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d4d669fa7b1ad418336549a817e8a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 02eab1bb1b5e08b41b8423ea18d91900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableIfPrereqMissing: 1
-  overrideFireMode: 1
-  fireMode: 0
-  overrideReloadType: 1
-  reloadType: 0
---- !u!114 &-5720457904960668997
+  grantType: 1
+  procChance: 1
+  stacksToAdd: 1
+  duration: 4
+  burnTickInterval: 1
+  burnDamagePerTickPerStack: 2
+  weakenPerStack: 0.06
+  slowPerStack: 0.05
+  shockChainDamagePerStack: 6
+  shockChainRadius: 3
+  shockMaxChains: 3
+--- !u!114 &-2460439649498193270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5694949213706457851}
+  m_GameObject: {fileID: 6546024800087286932}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 397730aeff21c84439432fffdcc847c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkId: 5
-  perkTier: 1
+  perkId: 403
+  perkTier: 2
   requiredPerkGroups: []
-  mutuallyExclusivePerkGroups:
-  - anyOfPerkIds:
-    - 6
-    - 7
+  mutuallyExclusivePerkGroups: []
   flavorText: 
-  description: "\u6B66\u5668\u53D8\u4E3A\u5355\u53D1\uFF0C\u5F39\u5323\u4F9B\u5F39\uFF0C\u89E3\u9501\u90E8\u5206\u914D\u4EF6"
+  description: "\u5B50\u5F39\u4F1A\u5BF9\u654C\u65B9\u5355\u4F4D\u65BD\u52A0\u4E2D\u6BD2\u6548\u679C"
